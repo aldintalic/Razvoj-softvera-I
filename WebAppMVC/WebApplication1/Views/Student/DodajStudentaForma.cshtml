@@ -1,0 +1,96 @@
+﻿@using EntityFrameworkExercise.Model
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>DodajStudentaForma</title>
+    <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap-solar.css" />
+
+    <style>
+        input, select {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<form style="margin: 20px;" action="/student/dodaj" class="form-group">
+    <table >
+        <tr>
+            <td>
+                <label>Ime</label>
+            </td>
+            <td> <input type="text" name="Ime" /></td>
+        </tr>
+        <tr>
+            <td>
+                <label>Prezime</label>
+            </td>
+            <td> <input type="text" name="Prezime" /></td>
+        </tr>
+        <tr>
+            <td>
+                <label>Datum rodjenja</label>
+            </td>
+            <td>
+                <input type="datetime-local" name="DatumRodjenja" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>Opstina rodjenja ID</label>
+            </td>
+            <td>
+                <select name="OpstinaRodjenjaID">
+                    <option value="" disabled selected>Opstina rodjenja</option>
+                    @foreach (var item in (List<Opstina>) (@ViewData["OpstineKey"]))
+                    {
+                        <option value="@item.ID" name="OpstinaRodjenjaID">@item.Naziv</option>
+                    }
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>Opstina prebivalista ID</label>
+            </td>
+            <td>
+                <select name="OpstinaPrebivalistaID">
+                    <option value="" disabled selected>Opstina prebivalista</option>
+                    @foreach (var item in (List<Opstina>)(@ViewData["OpstineKey"]))
+                    {
+                        <option value="@item.ID">@item.Naziv</option>
+                    }
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>Fakultet ID</label>
+            </td>
+            <td>
+                <select name="FakultetID">
+                    <option value="" disabled selected>Fakultet</option>
+                    @foreach (var item in (List<Fakultet>)(@ViewData["FakultetiKey"]))
+                    {
+                        <option value="@item.ID">@item.Naziv</option>
+                    }
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button class="btn btn-primary" type="submit">Dodaj</button>
+            </td>
+        </tr>
+    </table>
+</form>
+<a href="/student" style="text-decoration: none; color: blueviolet;font-size: 20px">  <--- Vrati se na početnu</a>
+</body>
+</html>
