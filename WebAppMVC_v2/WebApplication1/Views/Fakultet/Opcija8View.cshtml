@@ -1,0 +1,57 @@
+﻿@using EntityFrameworkExercise.Model
+@using EntityFrameworkExercise.Model.ViewsModels
+
+@{
+    Layout = null;
+
+    MojDbContext Db = new MojDbContext();
+
+    List<FakultetiBrStudenataVM> fbs = Db.fakulteti.Select(f => new FakultetiBrStudenataVM
+    {
+        FakultetID = f.ID,
+        FakultetNaziv = f.Naziv,
+        BrojStudenata = Db.studenti.Count(s => s.FakultetID == f.ID)
+
+    }).ToList();
+
+    string trenutnoVrijeme = @DateTime.Now.ToString();
+}
+<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap-solar.css" />
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Opcija8View</title>
+</head>
+<h2>Ovo je Opcija8View Trenutno vrijeme @trenutnoVrijeme</h2>
+<body>
+    <table class="table table-dark">
+        <thead>
+            <tr>
+                <th>ID fakulteta</th>
+                <th>Naziv fakulteta</th>
+                <th>Broj studenata</th>
+                <th>Akcija</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in fbs)
+            {
+                <tr>
+                    <td>@item.FakultetID</td>
+                    <td>@item.FakultetNaziv</td>
+                    <td>@item.BrojStudenata</td>
+                    <td><a href="/Fakultet/ObrisiZapis?id=@item.FakultetID" style="text-decoration: none; color: white;" onmouseover="this.style.color = 'darkgrey';" onmouseout="this.style.color = 'white';">Obrisi</a></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <h2>Dodaj jedan (testni) zapis u tabelu fakultet(html link koji poziva akciju) </h2>
+    <a href="/fakultet/DodajForma">Dodaj novi zapis</a><br /><br /><br />
+    <a href="/fakultet"> <---- Vrati se na home page</a>
+
+</body>
+</html>

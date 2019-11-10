@@ -1,0 +1,52 @@
+﻿@using EntityFrameworkExercise.Model
+@using Microsoft.EntityFrameworkCore
+@model List<ClassLibrary1.ViewsModels.Student.StudentiPrikaziVM>
+@{
+    Layout = null;
+}
+<link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap-solar.css" />
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>PrikaziStudente</title>
+</head>
+<body>
+<table class="table table-dark">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Ime</th>
+        <th>Prezime</th>
+        <th>ECTS</th>
+        @*<th>Datum rodjenja</th>
+        <th>Opstina rodjenja</th>
+        <th>Opstina prebivalista</th>
+        <th>Fakultet</th>*@
+        <th>Delete</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.ID</td>
+            <td>@item.Ime</td>
+            <td>@item.Prezime</td>
+            <td>@item.Ects</td>
+            @*<td>@item.DatumRodjenja</td>
+        <td>@item.OpstinaRodjenja.Naziv</td>
+        <td>@item.OpstinaPrebivalista.Naziv</td>
+        <td>@item.Fakultet.Naziv</td>*@
+            <td><a href="/student/obrisistudenta?id=@item.ID" style="text-decoration: none; color: azure;" onmouseover="this.style.color = 'grey';" onmouseout="this.style.color='azure'">Obrisi</a></td>
+        </tr>
+    }
+
+    </tbody>
+</table>
+<a href="/student" style="text-decoration: none; color: blueviolet;font-size: 20px">  <--- Vrati se na početnu</a>
+</body>
+</html>
