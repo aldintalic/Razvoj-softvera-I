@@ -53,12 +53,21 @@ namespace WebApplication1.Controllers
             return View(studenti);
         }
 
-        public ActionResult Dodaj(string Ime, string Prezime, DateTime DatumRodjenja, int OpstinaRodjenjaID, int OpstinaPrebivalistaID,
+        public ActionResult Dodaj(int studentID, string Ime, string Prezime, DateTime DatumRodjenja, int OpstinaRodjenjaID, int OpstinaPrebivalistaID,
             int FakultetID)
         {
             MojDbContext db=new MojDbContext();
 
-            Student novi=new Student();
+            Student novi;
+            if (studentID == 0)
+            {
+                novi = new Student();
+                db.Add(novi);
+            }
+            else
+            {
+                novi = db.studenti.Find(studentID);
+            }
             novi.Ime = Ime;
             novi.Prezime = Prezime;
             novi.DatumRodjenja = DatumRodjenja;
@@ -66,7 +75,6 @@ namespace WebApplication1.Controllers
             novi.OpstinaPrebivalistaID= OpstinaPrebivalistaID;
             novi.FakultetID = FakultetID;
 
-            db.Add(novi);
             db.SaveChanges();
             db.Dispose();
 
@@ -94,9 +102,18 @@ namespace WebApplication1.Controllers
         //}
 
         //DRUGI NACIN
-        public ActionResult DodajStudentaForma()
+        public ActionResult DodajStudentaForma(int studentID)
         {
             MojDbContext db = new MojDbContext();
+
+            Student s = new Student();
+
+            if (studentID != 0)
+            {
+                s = db.studenti.Find(studentID);
+            }
+            TempData["studentKey"] = s;
+
 
             List<ComboBoxVM> fakulteti = db.fakulteti.Select(f => new ComboBoxVM
             {
@@ -110,8 +127,8 @@ namespace WebApplication1.Controllers
                 Opis = o.Naziv
             }).ToList();
 
-            ViewData["fakultetiKey"] = fakulteti;
-            ViewData["opstineKey"] = opstine;
+            TempData["fakultetiKey"] = fakulteti;
+            TempData["opstineKey"] = opstine;
 
             db.Dispose();
 
@@ -124,9 +141,15 @@ namespace WebApplication1.Controllers
             Student s = db.studenti.Find(id);
             db.studenti.Remove(s);
             db.SaveChanges();
+            TempData["nekiKey"] = s.Ime+" "+s.Prezime;
             db.Dispose();
 
-            return Redirect("/Student/PrikaziStudente");
+            return Redirect("/Student/ObrisiPoruka");
+        }
+
+        public ActionResult ObrisiPoruka()
+        {
+            return View();
         }
     }
 }

@@ -134,3 +134,5 @@ C:\Users\admin\source\repos\EntityFrameworkExercise\WebApplication1\obj\Debug\ne
 C:\Users\admin\source\repos\EntityFrameworkExercise\WebApplication1\obj\Debug\netcoreapp3.0\Razor\Views\Student\DodajStudentaForma.cshtml.g.cs
 C:\Users\admin\source\repos\EntityFrameworkExercise\WebApplication1\obj\Debug\netcoreapp3.0\Razor\Views\Student\PrikaziPoruku.cshtml.g.cs
 C:\Users\admin\source\repos\EntityFrameworkExercise\WebApplication1\obj\Debug\netcoreapp3.0\Razor\Views\Fakultet\Index.cshtml.g.cs
+C:\Users\admin\source\repos\EntityFrameworkExercise\WebApplication1\obj\Debug\netcoreapp3.0\Razor\Views\Student\ObrisiPoruka.cshtml.g.cs
+C:\Users\admin\source\repos\EntityFrameworkExercise\WebApplication1\obj\Debug\netcoreapp3.0\Razor\Views\Fakultet\ObrisiPoruka.cshtml.g.cs

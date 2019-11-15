@@ -12,14 +12,18 @@ namespace WebApplication1.helper
 {
     public class HtmlFormaAlati
     {
-        public static HtmlString GenerisiComboBox(string naziv, List<ComboBoxVM> podaci)
+        public static HtmlString GenerisiComboBox(string naziv, List<ComboBoxVM> podaci, int id)
         {
-            string comboBox = @"<select name=" + naziv + ">" +
+            string comboBox = @"<select class='form-control selcls' name=" + naziv + ">" +
                               "<option value=' ' disabled selected>---Chose value---</option>";
 
             foreach (var item in podaci)
-                comboBox += "<option value=" + item.ID + ">" + item.Opis + "</option>";
-
+            {
+                if(item.ID==id)
+                    comboBox += "<option value=" + item.ID + " selected>" + item.Opis + "</option>";
+                else
+                    comboBox += "<option value=" + item.ID + ">" + item.Opis + "</option>";
+            }
             comboBox += "</select>";
 
             return new HtmlString(comboBox);

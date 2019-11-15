@@ -1,33 +1,29 @@
 ﻿@using ClassLibrary1.ViewsModels
 @using WebApplication1.helper
+@using EntityFrameworkExercise.Model
+
 
 @{
-    Layout = null;
-    var univerziteti = (List<ComboBoxVM>) (ViewData["univerzitetiKey"]);
+    var univerziteti = (List<ComboBoxVM>)(TempData["univerzitetiKey"]);
+    Fakultet obj = (Fakultet)(TempData["fakultetiKey"]);
 }
 
-<!DOCTYPE html>
-<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap-solar.css" />
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>DodajForma</title>
-</head>
-<body style="margin: 20px;">
-    <form action="/fakultet/DodajZapis">
-        <table>
-            <tr>
-                <td><label>Naziv fakulteta</label></td>
-                <td><input type="text" name="NazivFakulteta" /></td>
-            </tr>
-            <tr>
-                <td><label>Univerzitet</label></td>
-                <td>@HtmlFormaAlati.GenerisiComboBox("UniverzitetID", univerziteti)</td>
-            </tr>
-            <tr><td><input type="submit" value="SUBMIT" style="width: 100%;"/></td></tr>
-        </table>
-    </form>
+<form action="/fakultet/DodajZapis" class="form-check active">
+    <table>
+        <tr>
+            @*<td><label>FakultetID</label></td>*@
+            <td><input type="text" name="fakultetID" value="@obj.ID" hidden /></td>
+        </tr>
+        <tr>
+            <td><label>Naziv fakulteta</label></td>
+            <td><input type="text" name="NazivFakulteta" value="@obj.Naziv" /></td>
+        </tr>
+        <tr>
+            <td><label>Univerzitet</label></td>
+            <td>@HtmlFormaAlati.GenerisiComboBox("UniverzitetID", univerziteti, obj.UniverzitetID)</td>
+        </tr>
+        <tr><td><input type="submit" value="SUBMIT" style="width: 100%;" class="btn btn-outline-primary"/></td></tr>
+    </table>
+</form>
 
-</body>
-</html>

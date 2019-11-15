@@ -3,48 +3,40 @@
 @using WebApplication1.helper
 
 @{
-    Layout = null;
 
-    var fakulteti = (List<ComboBoxVM>) (ViewData["fakultetiKey"]);
-    var opstine = (List<ComboBoxVM>) (ViewData["opstineKey"]);
+    var fakulteti = (List<ComboBoxVM>) (TempData["fakultetiKey"]);
+    var opstine = (List<ComboBoxVM>) (TempData["opstineKey"]);
+    var student= (Student) (TempData["studentKey"]);
+    
 }
 
-<!DOCTYPE html>
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>DodajStudentaForma</title>
-    <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap-solar.css" />
-
-    <style>
-        input, select {
-            width: 100%;
-        }
-    </style>
-</head>
-<body>
 
 <form style="margin: 20px;" action="/student/dodaj" class="form-group">
-    <table >
+    <table>
+        <tr>
+            @*<td>
+                <label>ID</label>
+            </td>*@
+            <td> <input type="text" name="studentID" value="@student.ID" hidden/></td>
+        </tr>
         <tr>
             <td>
                 <label>Ime</label>
             </td>
-            <td> <input type="text" name="Ime" /></td>
+            <td> <input type="text" name="Ime" value="@student.Ime" /></td>
         </tr>
         <tr>
             <td>
                 <label>Prezime</label>
             </td>
-            <td> <input type="text" name="Prezime" /></td>
+            <td> <input type="text" name="Prezime" value="@student.Prezime"/></td>
         </tr>
         <tr>
             <td>
                 <label>Datum rodjenja</label>
             </td>
             <td>
-                <input type="datetime-local" name="DatumRodjenja" />
+                <input type="datetime" name="DatumRodjenja" value="@student.DatumRodjenja"/>
             </td>
         </tr>
         <tr>
@@ -59,7 +51,7 @@
                         <option value="@item.ID">@item.Opis</option>
                     }
                 </select>*@
-                @HtmlFormaAlati.GenerisiComboBox("OpstinaRodjenjaID", opstine)
+                @HtmlFormaAlati.GenerisiComboBox("OpstinaRodjenjaID", opstine, student.OpstinaRodjenjaID)
             </td>
         </tr>
         <tr>
@@ -74,7 +66,7 @@
                         <option value="@item.ID">@item.Opis</option>
                     }
                 </select>*@
-                @HtmlFormaAlati.GenerisiComboBox("OpstinaPrebivalistaID", opstine)
+                @HtmlFormaAlati.GenerisiComboBox("OpstinaPrebivalistaID", opstine, student.OpstinaPrebivalistaID)
             </td>
         </tr>
         <tr>
@@ -83,13 +75,13 @@
             </td>
             <td>
                 @*<select name="FakultetID">
-            <option value="" disabled selected>Fakultet</option>
-            @foreach (var item in fakulteti)
-            {
-                <option value="@item.ID">@item.Opis</option>
-            }
-        </select>*@
-                @HtmlFormaAlati.GenerisiComboBox("FakultetID", fakulteti)
+                    <option value="" disabled selected>Fakultet</option>
+                    @foreach (var item in fakulteti)
+                    {
+                        <option value="@item.ID">@item.Opis</option>
+                    }
+                </select>*@
+                @HtmlFormaAlati.GenerisiComboBox("FakultetID", fakulteti, student.FakultetID)
             </td>
         </tr>
         <tr>
@@ -99,6 +91,4 @@
         </tr>
     </table>
 </form>
-<a href="/student" style="text-decoration: none; color: blueviolet;font-size: 20px">  <--- Vrati se na početnu</a>
-</body>
-</html>
+<a href="/student" style="text-decoration: none; color: blueviolet;font-size: 20px">  << Vrati se na početnu</a>

@@ -48,25 +48,30 @@ namespace WebApplication1.Controllers
             return View("Opcija8View");
         }
 
-        public ActionResult DodajZapis(string NazivFakulteta, int UniverzitetID )
+        public ActionResult DodajZapis(int fakultetID, string NazivFakulteta, int UniverzitetID )
         {
             //ovdje dodati kod za dodavanje zapisa u tabelu
             MojDbContext Db = new MojDbContext();
-            if (NazivFakulteta != null)
+
+            Fakultet f;
+
+            if (fakultetID == 0)
             {
-
-                Fakultet novi = new Fakultet();
-
-                novi.Naziv = NazivFakulteta;
-                novi.UniverzitetID = UniverzitetID;
-
-                Db.fakulteti.Add(novi);
-                Db.SaveChanges();
-
-                return Redirect("/fakultet/DodajPoruku");
+                f = new Fakultet();
+                Db.fakulteti.Add(f);
             }
+            else
+            {
+                f = Db.fakulteti.Find(fakultetID);
+            }
+
+            f.Naziv = NazivFakulteta;
+            f.UniverzitetID = UniverzitetID;
+
+            Db.SaveChanges();
             Db.Dispose();
-            return Redirect("/fakultet/opcija8html");
+
+            return Redirect("/fakultet/DodajPoruku");   
         }
 
         public ActionResult DodajPoruku()
@@ -74,16 +79,25 @@ namespace WebApplication1.Controllers
             return View("DodajPoruku");
         }
 
-        public ActionResult DodajForma()
+        public ActionResult DodajForma(int fakultetID)
         {
             MojDbContext Db = new MojDbContext();
+
+            Fakultet f = new Fakultet();
+
+            if (fakultetID != 0)
+            {
+                f = Db.fakulteti.Find(fakultetID);
+            }
+            
+            TempData["fakultetiKey"] = f;
             List<ComboBoxVM> univerziteti = Db.univerziteti.Select(u => new ComboBoxVM
             {
                 ID = u.ID,
                 Opis = u.Naziv
             }).ToList();
+            TempData["univerzitetiKey"] = univerziteti;
 
-            ViewData["univerzitetiKey"] = univerziteti;
             Db.Dispose();
 
             return View("DodajForma");
@@ -96,7 +110,13 @@ namespace WebApplication1.Controllers
             db.fakulteti.Remove(f);
             db.SaveChanges();
             db.Dispose();
-            return Redirect("/Fakultet/opcija8html");
+            TempData["nekiKey"] = f.Naziv;
+            return Redirect("/Fakultet/ObrisiPoruka");
+        }
+
+        public ActionResult ObrisiPoruka()
+        {
+            return View();
         }
     }
 }
