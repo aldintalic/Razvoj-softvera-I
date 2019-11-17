@@ -18,11 +18,7 @@ namespace FIT_PONG.Models
         [Required]
         public string PasswordSalt { get; set; }
 
-        public Login(string username, string password)
-        {
-            Username = username;
-            //generate passwordhash and passwordsalt (password)
-        }
+        
 
     }
 }

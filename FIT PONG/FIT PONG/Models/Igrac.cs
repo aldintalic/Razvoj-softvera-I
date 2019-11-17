@@ -17,6 +17,8 @@ namespace FIT_PONG.Models
         [Range(1,250)]
         public double Visina { get; set; }
         public int BrojPosjetaNaProfil { get; set; }
+        public string ProfileImagePath { get; set; }
+
 
         public Igrac()
         {
