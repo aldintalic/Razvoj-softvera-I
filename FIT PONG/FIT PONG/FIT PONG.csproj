@@ -6,6 +6,25 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Migrations\20191119151848_TakmicenjeFeed.cs" />
+    <Compile Remove="Migrations\20191119151848_TakmicenjeFeed.Designer.cs" />
+    <Compile Remove="Migrations\20191206125946_TakmicenjeFeedovi.cs" />
+    <Compile Remove="Migrations\20191206125946_TakmicenjeFeedovi.Designer.cs" />
+    <Compile Remove="Migrations\20191206130624_NullableFeedID.cs" />
+    <Compile Remove="Migrations\20191206130624_NullableFeedID.Designer.cs" />
+    <Compile Remove="Migrations\20191210221716_ProbaMigracija.cs" />
+    <Compile Remove="Migrations\20191210221716_ProbaMigracija.Designer.cs" />
+    <Compile Remove="Migrations\20191211083639_IgracTabelaTPT.cs" />
+    <Compile Remove="Migrations\20191211083639_IgracTabelaTPT.Designer.cs" />
+    <Compile Remove="Migrations\20191211085141_IgracTabelaTPT.cs" />
+    <Compile Remove="Migrations\20191211085141_IgracTabelaTPT.Designer.cs" />
+    <Compile Remove="Migrations\20191212160335_ReportAttachmenti.cs" />
+    <Compile Remove="Migrations\20191212160335_ReportAttachmenti.Designer.cs" />
+    <Compile Remove="Migrations\20191213174914_Talatest.cs" />
+    <Compile Remove="Migrations\20191213174914_Talatest.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Include="wwwroot\fitpong.jpg" />
   </ItemGroup>
 

@@ -124,9 +124,44 @@ C:\Users\talicni\Desktop\SEMINARSKI_RAD_RS_1\webapp\FIT PONG\FIT PONG\obj\Debug\
 C:\Users\talicni\Desktop\SEMINARSKI_RAD_RS_1\webapp\FIT PONG\FIT PONG\obj\Debug\netcoreapp3.0\FIT PONG.csproj.CopyComplete
 C:\Users\talicni\Desktop\SEMINARSKI_RAD_RS_1\webapp\FIT PONG\FIT PONG\obj\Debug\netcoreapp3.0\FIT PONG.dll
 C:\Users\talicni\Desktop\SEMINARSKI_RAD_RS_1\webapp\FIT PONG\FIT PONG\obj\Debug\netcoreapp3.0\FIT PONG.pdb
+C:\Users\talicni\Desktop\SEMINARSKI_RAD_RS_1\webapp\FIT PONG\FIT PONG\obj\Debug\netcoreapp3.0\Razor\Views\Takmicenje\Dodaj.cshtml.g.cs
+C:\Users\talicni\Desktop\SEMINARSKI_RAD_RS_1\webapp\FIT PONG\FIT PONG\obj\Debug\netcoreapp3.0\Razor\Views\Takmicenje\Edit.cshtml.g.cs
+C:\Users\talicni\Desktop\SEMINARSKI_RAD_RS_1\webapp\FIT PONG\FIT PONG\obj\Debug\netcoreapp3.0\Razor\Views\Takmicenje\Index.cshtml.g.cs
+C:\Users\talicni\Desktop\SEMINARSKI_RAD_RS_1\webapp\FIT PONG\FIT PONG\obj\Debug\netcoreapp3.0\Razor\Views\Takmicenje\Neuspjeh.cshtml.g.cs
+C:\Users\talicni\Desktop\SEMINARSKI_RAD_RS_1\webapp\FIT PONG\FIT PONG\obj\Debug\netcoreapp3.0\Razor\Views\Takmicenje\Obrisi.cshtml.g.cs
+C:\Users\talicni\Desktop\SEMINARSKI_RAD_RS_1\webapp\FIT PONG\FIT PONG\obj\Debug\netcoreapp3.0\Razor\Views\Takmicenje\Prikaz.cshtml.g.cs
+C:\Users\talicni\Desktop\SEMINARSKI_RAD_RS_1\webapp\FIT PONG\FIT PONG\obj\Debug\netcoreapp3.0\Razor\Views\Takmicenje\Uspjeh.cshtml.g.cs
+C:\Users\talicni\Desktop\SEMINARSKI_RAD_RS_1\webapp\FIT PONG\FIT PONG\obj\Debug\netcoreapp3.0\Razor\Views\Feed\Dodaj.cshtml.g.cs
+C:\Users\talicni\Desktop\SEMINARSKI_RAD_RS_1\webapp\FIT PONG\FIT PONG\obj\Debug\netcoreapp3.0\Razor\Views\Feed\Edit.cshtml.g.cs
+C:\Users\talicni\Desktop\SEMINARSKI_RAD_RS_1\webapp\FIT PONG\FIT PONG\obj\Debug\netcoreapp3.0\Razor\Views\Feed\Index.cshtml.g.cs
+C:\Users\talicni\Desktop\SEMINARSKI_RAD_RS_1\webapp\FIT PONG\FIT PONG\obj\Debug\netcoreapp3.0\Razor\Views\Feed\Neuspjeh.cshtml.g.cs
+C:\Users\talicni\Desktop\SEMINARSKI_RAD_RS_1\webapp\FIT PONG\FIT PONG\obj\Debug\netcoreapp3.0\Razor\Views\Feed\Obrisi.cshtml.g.cs
+C:\Users\talicni\Desktop\SEMINARSKI_RAD_RS_1\webapp\FIT PONG\FIT PONG\obj\Debug\netcoreapp3.0\Razor\Views\Feed\Postoji.cshtml.g.cs
+C:\Users\talicni\Desktop\SEMINARSKI_RAD_RS_1\webapp\FIT PONG\FIT PONG\obj\Debug\netcoreapp3.0\Razor\Views\Feed\Prikaz.cshtml.g.cs
+C:\Users\talicni\Desktop\SEMINARSKI_RAD_RS_1\webapp\FIT PONG\FIT PONG\obj\Debug\netcoreapp3.0\Razor\Views\Feed\Uspjeh.cshtml.g.cs
 C:\Users\talicni\Desktop\SEMINARSKI_RAD_RS_1\webapp\FIT PONG\FIT PONG\obj\Debug\netcoreapp3.0\Razor\Views\Grad\Dodaj.cshtml.g.cs
 C:\Users\talicni\Desktop\SEMINARSKI_RAD_RS_1\webapp\FIT PONG\FIT PONG\obj\Debug\netcoreapp3.0\Razor\Views\Grad\Edit.cshtml.g.cs
-C:\Users\talicni\Desktop\SEMINARSKI_RAD_RS_1\webapp\FIT PONG\FIT PONG\obj\Debug\netcoreapp3.0\Razor\Views\SistemTakmicenja\Index.cshtml.g.cs
+C:\Users\talicni\Desktop\SEMINARSKI_RAD_RS_1\webapp\FIT PONG\FIT PONG\obj\Debug\netcoreapp3.0\Razor\Views\Grad\Greska.cshtml.g.cs
 C:\Users\talicni\Desktop\SEMINARSKI_RAD_RS_1\webapp\FIT PONG\FIT PONG\obj\Debug\netcoreapp3.0\Razor\Views\Grad\Index.cshtml.g.cs
+C:\Users\talicni\Desktop\SEMINARSKI_RAD_RS_1\webapp\FIT PONG\FIT PONG\obj\Debug\netcoreapp3.0\Razor\Views\Objava\Dodaj.cshtml.g.cs
+C:\Users\talicni\Desktop\SEMINARSKI_RAD_RS_1\webapp\FIT PONG\FIT PONG\obj\Debug\netcoreapp3.0\Razor\Views\Objava\Edit.cshtml.g.cs
+C:\Users\talicni\Desktop\SEMINARSKI_RAD_RS_1\webapp\FIT PONG\FIT PONG\obj\Debug\netcoreapp3.0\Razor\Views\Objava\Neuspjeh.cshtml.g.cs
+C:\Users\talicni\Desktop\SEMINARSKI_RAD_RS_1\webapp\FIT PONG\FIT PONG\obj\Debug\netcoreapp3.0\Razor\Views\Objava\Obrisi.cshtml.g.cs
+C:\Users\talicni\Desktop\SEMINARSKI_RAD_RS_1\webapp\FIT PONG\FIT PONG\obj\Debug\netcoreapp3.0\Razor\Views\Objava\Prikaz.cshtml.g.cs
+C:\Users\talicni\Desktop\SEMINARSKI_RAD_RS_1\webapp\FIT PONG\FIT PONG\obj\Debug\netcoreapp3.0\Razor\Views\Objava\Uspjeh.cshtml.g.cs
 C:\Users\talicni\Desktop\SEMINARSKI_RAD_RS_1\webapp\FIT PONG\FIT PONG\obj\Debug\netcoreapp3.0\Razor\Views\SistemTakmicenja\Dodaj.cshtml.g.cs
 C:\Users\talicni\Desktop\SEMINARSKI_RAD_RS_1\webapp\FIT PONG\FIT PONG\obj\Debug\netcoreapp3.0\Razor\Views\SistemTakmicenja\Edit.cshtml.g.cs
+C:\Users\talicni\Desktop\SEMINARSKI_RAD_RS_1\webapp\FIT PONG\FIT PONG\obj\Debug\netcoreapp3.0\Razor\Views\SistemTakmicenja\Greska.cshtml.g.cs
+C:\Users\talicni\Desktop\SEMINARSKI_RAD_RS_1\webapp\FIT PONG\FIT PONG\obj\Debug\netcoreapp3.0\Razor\Views\SistemTakmicenja\Index.cshtml.g.cs
+C:\Users\talicni\Desktop\SEMINARSKI_RAD_RS_1\webapp\FIT PONG\FIT PONG\obj\Debug\netcoreapp3.0\Razor\Views\Igrac\Index.cshtml.g.cs
+C:\Users\talicni\Desktop\SEMINARSKI_RAD_RS_1\webapp\FIT PONG\FIT PONG\obj\Debug\netcoreapp3.0\Razor\Views\Igrac\Greska.cshtml.g.cs
+C:\Users\talicni\Desktop\SEMINARSKI_RAD_RS_1\webapp\FIT PONG\FIT PONG\obj\Debug\netcoreapp3.0\Razor\Views\Igrac\PrikazProfila.cshtml.g.cs
+C:\Users\talicni\Desktop\SEMINARSKI_RAD_RS_1\webapp\FIT PONG\FIT PONG\obj\Debug\netcoreapp3.0\Razor\Views\Igrac\Dodaj.cshtml.g.cs
+C:\Users\talicni\Desktop\SEMINARSKI_RAD_RS_1\webapp\FIT PONG\FIT PONG\obj\Debug\netcoreapp3.0\Razor\Views\Report\Dodaj.cshtml.g.cs
+C:\Users\talicni\Desktop\SEMINARSKI_RAD_RS_1\webapp\FIT PONG\FIT PONG\obj\Debug\netcoreapp3.0\Razor\Views\Report\Neuspjeh.cshtml.g.cs
+C:\Users\talicni\Desktop\SEMINARSKI_RAD_RS_1\webapp\FIT PONG\FIT PONG\obj\Debug\netcoreapp3.0\Razor\Views\Report\Prikaz.cshtml.g.cs
+C:\Users\talicni\Desktop\SEMINARSKI_RAD_RS_1\webapp\FIT PONG\FIT PONG\obj\Debug\netcoreapp3.0\Razor\Views\Igrac\EditPodatke.cshtml.g.cs
+C:\Users\talicni\Desktop\SEMINARSKI_RAD_RS_1\webapp\FIT PONG\FIT PONG\obj\Debug\netcoreapp3.0\Razor\Views\Igrac\EditSliku.cshtml.g.cs
+C:\Users\talicni\Desktop\SEMINARSKI_RAD_RS_1\webapp\FIT PONG\FIT PONG\obj\Debug\netcoreapp3.0\Razor\Views\Igrac\Statistike.cshtml.g.cs
+C:\Users\talicni\Desktop\SEMINARSKI_RAD_RS_1\webapp\FIT PONG\FIT PONG\obj\Debug\netcoreapp3.0\Razor\Views\Takmicenje\Prijava.cshtml.g.cs
+C:\Users\talicni\Desktop\SEMINARSKI_RAD_RS_1\webapp\FIT PONG\FIT PONG\obj\Debug\netcoreapp3.0\Razor\Views\Takmicenje\UspjesnaPrijava.cshtml.g.cs

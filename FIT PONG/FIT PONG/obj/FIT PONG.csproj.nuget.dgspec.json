@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\talicni\\Desktop\\testni\\FIT PONG\\FIT PONG.csproj": {}
+    "C:\\Users\\talicni\\Desktop\\SEMINARSKI_RAD_RS_1\\webapp\\FIT PONG\\FIT PONG\\FIT PONG.csproj": {}
   },
   "projects": {
-    "C:\\Users\\talicni\\Desktop\\testni\\FIT PONG\\FIT PONG.csproj": {
+    "C:\\Users\\talicni\\Desktop\\SEMINARSKI_RAD_RS_1\\webapp\\FIT PONG\\FIT PONG\\FIT PONG.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\talicni\\Desktop\\testni\\FIT PONG\\FIT PONG.csproj",
+        "projectUniqueName": "C:\\Users\\talicni\\Desktop\\SEMINARSKI_RAD_RS_1\\webapp\\FIT PONG\\FIT PONG\\FIT PONG.csproj",
         "projectName": "FIT PONG",
-        "projectPath": "C:\\Users\\talicni\\Desktop\\testni\\FIT PONG\\FIT PONG.csproj",
+        "projectPath": "C:\\Users\\talicni\\Desktop\\SEMINARSKI_RAD_RS_1\\webapp\\FIT PONG\\FIT PONG\\FIT PONG.csproj",
         "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\talicni\\Desktop\\testni\\FIT PONG\\obj\\",
+        "outputPath": "C:\\Users\\talicni\\Desktop\\SEMINARSKI_RAD_RS_1\\webapp\\FIT PONG\\FIT PONG\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
