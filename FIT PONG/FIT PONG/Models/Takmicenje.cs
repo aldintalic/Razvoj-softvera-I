@@ -13,8 +13,8 @@ namespace FIT_PONG.Models
         public int ID { get; set; }
         [Required, StringLength(50)]
         public string Naziv { get; set; }
-        public DateTime RokPocetkaPrijave { get; set; }
-        public DateTime RokZavrsetkaPrijave { get; set; }
+        public DateTime? RokPocetkaPrijave { get; set; }
+        public DateTime? RokZavrsetkaPrijave { get; set; }
         public DateTime DatumKreiranja { get; set; }
 
 
@@ -23,7 +23,8 @@ namespace FIT_PONG.Models
 
         [RegularExpression(@"^[0-9]+$")]
         public int MinimalniELO { get; set; }
-
+        public bool Seeded { get; set; }
+        public bool Inicirano { get; set; }
         public Kategorija Kategorija { get; set; }
         public int KategorijaID { get; set; }
 
@@ -40,6 +41,9 @@ namespace FIT_PONG.Models
 
         public Feed Feed { get; set; }
         public int FeedID { get; set; }
+
+        public List<Bracket> Bracketi { get; set; }
+        public List<Prijava> Prijave { get; set; }
 
         public void setAtribute(string _naziv, DateTime _pocetakprijava, DateTime _krajprijava,
             int _minimalniELO, int _kategorijaID, int _sistemID, int _vrstaID, int _statusID,
@@ -72,17 +76,22 @@ namespace FIT_PONG.Models
             DatumZavrsetka = obj.DatumZavrsetka ?? null;
             RokPocetkaPrijave = obj.RokPocetkaPrijave;
             RokZavrsetkaPrijave = obj.RokZavrsetkaPrijave;
-            MinimalniELO = obj.MinimalniELO;
+            MinimalniELO = obj.MinimalniELO ?? 0;
             KategorijaID = obj.KategorijaID;
             SistemID = obj.SistemID;
             VrstaID = obj.VrstaID;
             StatusID = obj.StatusID;
             DatumKreiranja = DateTime.Now;
+            Seeded = obj.Seeded;
             BrojRundi = 0;
+            Bracketi = new List<Bracket>();
+            Prijave = new List<Prijava>();
+            Inicirano = false;
         }
         public Takmicenje()
         {
-
+            Bracketi = new List<Bracket>();
+            Prijave = new List<Prijava>();
         }
     }
 }

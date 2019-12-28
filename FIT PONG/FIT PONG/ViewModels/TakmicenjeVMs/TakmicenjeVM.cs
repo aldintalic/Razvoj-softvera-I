@@ -10,12 +10,13 @@ namespace FIT_PONG.ViewModels.TakmicenjeVMs
     {
         public int ID { get; set; }
         public string Naziv { get; set; }
-        public DateTime DatumPocetka { get; set; }
-        public DateTime DatumZavrsetka { get; set; }
-        public DateTime DatumPocetkaPrijava { get; set; }
-        public DateTime DatumZavrsetkaPrijava { get; set; }
+        public DateTime? DatumPocetka { get; set; }
+        public DateTime? DatumZavrsetka { get; set; }
+        public DateTime? DatumPocetkaPrijava { get; set; }
+        public DateTime? DatumZavrsetkaPrijava { get; set; }
         public DateTime DatumKreiranja { get; set; }
         public int BrojRundi { get; set; }
+        public bool Seeded { get; set; }
         public int MinimalniELO{ get; set; }
         public string Kategorija { get; set; }
         public string Sistem { get; set; }
@@ -23,6 +24,8 @@ namespace FIT_PONG.ViewModels.TakmicenjeVMs
         public string Status { get; set; }
         public int BrojPrijavljenih { get; set; }
         public int FeedID { get; set; }
+        public List<Prijava> Prijave { get; set; }
+        public List<Bracket> Bracketi { get; set; }
 
         public TakmicenjeVM(Takmicenje obj, int brojPrijavljenih = 0)
         {
@@ -32,6 +35,7 @@ namespace FIT_PONG.ViewModels.TakmicenjeVMs
             DatumZavrsetka = obj.DatumZavrsetka.GetValueOrDefault();
             DatumPocetkaPrijava = obj.RokPocetkaPrijave;
             DatumZavrsetkaPrijava = obj.RokZavrsetkaPrijave;
+            Seeded = obj.Seeded;
             DatumKreiranja = obj.DatumKreiranja;
             BrojRundi = obj.BrojRundi.GetValueOrDefault(0);
             MinimalniELO = obj.MinimalniELO;
@@ -41,6 +45,8 @@ namespace FIT_PONG.ViewModels.TakmicenjeVMs
             Status = obj.Status.Opis;
             BrojPrijavljenih = brojPrijavljenih;
             FeedID = obj.FeedID;
+            Prijave = obj.Prijave;
+            Bracketi= obj.Bracketi;
         }
         public TakmicenjeVM() { }
     }

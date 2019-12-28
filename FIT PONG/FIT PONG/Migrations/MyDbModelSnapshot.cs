@@ -42,6 +42,21 @@ namespace FIT_PONG.Migrations
                     b.ToTable("Attachments");
                 });
 
+            modelBuilder.Entity("FIT_PONG.Models.BlokLista", b =>
+                {
+                    b.Property<int>("IgracID")
+                        .HasColumnType("int");
+
+                    b.Property<int>("TakmicenjeID")
+                        .HasColumnType("int");
+
+                    b.HasKey("IgracID", "TakmicenjeID");
+
+                    b.HasIndex("TakmicenjeID");
+
+                    b.ToTable("BlokListe");
+                });
+
             modelBuilder.Entity("FIT_PONG.Models.Bracket", b =>
                 {
                     b.Property<int>("ID")
@@ -53,7 +68,12 @@ namespace FIT_PONG.Migrations
                         .HasColumnType("nvarchar(40)")
                         .HasMaxLength(40);
 
+                    b.Property<int>("TakmicenjeID")
+                        .HasColumnType("int");
+
                     b.HasKey("ID");
+
+                    b.HasIndex("TakmicenjeID");
 
                     b.ToTable("Brackets");
                 });
@@ -131,13 +151,14 @@ namespace FIT_PONG.Migrations
                         .HasMaxLength(8);
 
                     b.Property<string>("PrikaznoIme")
+                        .IsRequired()
                         .HasColumnType("nvarchar(50)")
                         .HasMaxLength(50);
 
                     b.Property<string>("ProfileImagePath")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<double>("Visina")
+                    b.Property<double?>("Visina")
                         .HasColumnType("float");
 
                     b.HasKey("ID");
@@ -147,25 +168,29 @@ namespace FIT_PONG.Migrations
 
             modelBuilder.Entity("FIT_PONG.Models.Igrac_Utakmica", b =>
                 {
-                    b.Property<int>("IgracID")
+                    b.Property<int>("IgID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int?>("IgracID")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("OsvojeniSetovi")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("PristupniElo")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("TipRezultataID")
                         .HasColumnType("int");
 
                     b.Property<int>("UtakmicaID")
                         .HasColumnType("int");
 
-                    b.Property<int>("ID")
-                        .HasColumnType("int");
+                    b.HasKey("IgID");
 
-                    b.Property<int>("OsvojeniSetovi")
-                        .HasColumnType("int");
-
-                    b.Property<int>("PristupniElo")
-                        .HasColumnType("int");
-
-                    b.Property<int>("TipRezultataID")
-                        .HasColumnType("int");
-
-                    b.HasKey("IgracID", "UtakmicaID");
+                    b.HasIndex("IgracID");
 
                     b.HasIndex("TipRezultataID");
 
@@ -325,6 +350,7 @@ namespace FIT_PONG.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Naziv")
+                        .IsRequired()
                         .HasColumnType("nvarchar(50)")
                         .HasMaxLength(50);
 
@@ -541,6 +567,9 @@ namespace FIT_PONG.Migrations
                     b.Property<int>("FeedID")
                         .HasColumnType("int");
 
+                    b.Property<bool>("Inicirano")
+                        .HasColumnType("bit");
+
                     b.Property<int>("KategorijaID")
                         .HasColumnType("int");
 
@@ -552,11 +581,14 @@ namespace FIT_PONG.Migrations
                         .HasColumnType("nvarchar(50)")
                         .HasMaxLength(50);
 
-                    b.Property<DateTime>("RokPocetkaPrijave")
+                    b.Property<DateTime?>("RokPocetkaPrijave")
                         .HasColumnType("datetime2");
 
-                    b.Property<DateTime>("RokZavrsetkaPrijave")
+                    b.Property<DateTime?>("RokZavrsetkaPrijave")
                         .HasColumnType("datetime2");
+
+                    b.Property<bool>("Seeded")
+                        .HasColumnType("bit");
 
                     b.Property<int>("SistemID")
                         .HasColumnType("int");
@@ -803,6 +835,30 @@ namespace FIT_PONG.Migrations
                         .HasForeignKey("ReportID");
                 });
 
+            modelBuilder.Entity("FIT_PONG.Models.BlokLista", b =>
+                {
+                    b.HasOne("FIT_PONG.Models.Igrac", "Igrac")
+                        .WithMany()
+                        .HasForeignKey("IgracID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("FIT_PONG.Models.Takmicenje", "Takmicenje")
+                        .WithMany()
+                        .HasForeignKey("TakmicenjeID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("FIT_PONG.Models.Bracket", b =>
+                {
+                    b.HasOne("FIT_PONG.Models.Takmicenje", "Takmicenje")
+                        .WithMany("Bracketi")
+                        .HasForeignKey("TakmicenjeID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
             modelBuilder.Entity("FIT_PONG.Models.FeedObjava", b =>
                 {
                     b.HasOne("FIT_PONG.Models.Feed", "Feed")
@@ -831,18 +887,14 @@ namespace FIT_PONG.Migrations
                 {
                     b.HasOne("FIT_PONG.Models.Igrac", "Igrac")
                         .WithMany()
-                        .HasForeignKey("IgracID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("IgracID");
 
                     b.HasOne("FIT_PONG.Models.Tip_Rezultata", "TipRezultata")
                         .WithMany()
-                        .HasForeignKey("TipRezultataID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("TipRezultataID");
 
                     b.HasOne("FIT_PONG.Models.Utakmica", "Utakmica")
-                        .WithMany()
+                        .WithMany("UcescaNaUtakmici")
                         .HasForeignKey("UtakmicaID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -881,7 +933,7 @@ namespace FIT_PONG.Migrations
             modelBuilder.Entity("FIT_PONG.Models.Prijava", b =>
                 {
                     b.HasOne("FIT_PONG.Models.Takmicenje", "Takmicenje")
-                        .WithMany()
+                        .WithMany("Prijave")
                         .HasForeignKey("TakmicenjeID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -905,7 +957,7 @@ namespace FIT_PONG.Migrations
             modelBuilder.Entity("FIT_PONG.Models.Runda", b =>
                 {
                     b.HasOne("FIT_PONG.Models.Bracket", "Bracket")
-                        .WithMany()
+                        .WithMany("Runde")
                         .HasForeignKey("BracketID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -1025,7 +1077,7 @@ namespace FIT_PONG.Migrations
             modelBuilder.Entity("FIT_PONG.Models.Utakmica", b =>
                 {
                     b.HasOne("FIT_PONG.Models.Runda", "Runda")
-                        .WithMany()
+                        .WithMany("Utakmice")
                         .HasForeignKey("RundaID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();

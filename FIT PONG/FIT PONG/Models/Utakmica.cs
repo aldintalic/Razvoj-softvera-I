@@ -25,5 +25,22 @@ namespace FIT_PONG.Models
 
         public Status_Utakmice Status { get; set; }
         public int StatusID { get; set; }
+
+        public List<Igrac_Utakmica> UcescaNaUtakmici{ get; set; }
+        
+        public int OdgovarajuceMjestoUcesca()
+        {
+            int index = -1;
+            for (int i = 0; i < UcescaNaUtakmici.Count(); i++)
+            {
+                if (UcescaNaUtakmici[i].IgracID == null)
+                {
+                    index = i;
+                    break;
+                }
+            }
+
+            return index;
+        }
     }
 }
