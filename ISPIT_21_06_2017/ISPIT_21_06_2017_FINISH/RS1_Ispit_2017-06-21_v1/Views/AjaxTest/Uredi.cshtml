@@ -1,0 +1,15 @@
+﻿@model RS1_Ispit_2017_06_21_v1.ViewModels.AjaxTestUrediVM
+
+<h3>Evidentiranje rezultata</h3>
+<form ajax-poziv="da" action="/AjaxTest/Uredi" ajax-rezultat="ajaxDiv" >
+        <label asp-for="Ucenik"></label>
+        <input asp-for="Ucenik" readonly/>
+        <br />
+        <label asp-for="Bodovi"></label>
+        <input asp-for="Bodovi" />
+    <span asp-validation-for="Bodovi" class="text-danger"></span>
+        <br /><br />
+        <input asp-for="StavkaID" hidden />
+        <input type="submit" value="Snimi" class="btn btn-primary" />
+    </form>
+

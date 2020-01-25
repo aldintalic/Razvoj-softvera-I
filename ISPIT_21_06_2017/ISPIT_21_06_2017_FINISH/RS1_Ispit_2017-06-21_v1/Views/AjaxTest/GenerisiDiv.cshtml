@@ -1,0 +1,49 @@
+﻿@model List<RS1_Ispit_2017_06_21_v1.ViewModels.AjaxTestGenerisiDivVM>
+<style>
+    a{
+        cursor:pointer;
+        margin-left:5px;
+    }
+</style>
+<h3>Rezultati ispita</h3>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Učenik</th>
+            <th>Opci uspjeh</th>
+            <th>Bodovi (max 100)</th>
+            <th>Oslobodjen</th>
+            <th>Akcija</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>@item.Ucenik</td>
+            <td>@item.OpciUspjeh</td>
+            @if (item.Oslobodjen)
+            {
+                <td>Oslobodjen</td>
+                <td>DA <a href="/AjaxTest/PromijeniStanje/@item.Id" ajax-poziv="da" ajax-rezultat="ajaxDiv">(promijeni)</a></td>
+            }
+            else
+            {
+                <td><input id="txtInput-@item.StavkaId" type="text" value="@item.Bodovi" /><a href="" onclick="this.href=getUrl(@item.StavkaId)" ajax-poziv="da" ajax-rezultat="ajaxDiv" class="btn btn-primary">Spremi</a>@Html.ValidationMessage("test")</td>
+                <td>NE <a href="/AjaxTest/PromijeniStanje/@item.Id" ajax-poziv="da" ajax-rezultat="ajaxDiv">(promijeni)</a></td>
+            
+             }
+            <td><a ajax-poziv="da" ajax-rezultat="ajaxDiv" href="/AjaxTest/Uredi/@item.Id" class="btn btn-primary">Uredi</a></td>
+        </tr>
+        }
+    </tbody>
+</table>
+
+<script>
+    function getUrl(id) {
+        var url = "/AjaxTest/PromijeniBodove?id=" + id;
+        var bod = document.getElementById("txtInput-"+id).value;
+        url += "&bodovi=" + bod;
+        return url;
+    }
+</script>

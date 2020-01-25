@@ -1,0 +1,27 @@
+﻿@model RS1_Ispit_2017_06_21_v1.ViewModels.MaturskiIspitDodajVM
+@{
+    ViewData["Title"] = "Dodaj";
+    var nastavnici = ViewBag.nastavnici as List<SelectListItem>;
+    var odjeljenja = ViewBag.odjeljenja as List<SelectListItem>;
+
+}
+
+<h2>Novi maturski ispit</h2>
+
+<form action="/Ispiti/Dodaj" method="post">
+
+    <label>Ispitivač: </label>
+    @Html.DropDownListFor(x => x.NastavnikId, nastavnici, "Izaberi nastavnika")
+    <span asp-validation-for="NastavnikId" class="text-danger"></span>
+    <br />
+    <label asp-for="Datum"></label>
+    <input asp-for="Datum" />
+    <span asp-validation-for="Datum" class="text-danger"></span>
+    <br />
+    <label asp-for="Odjeljenje"></label>
+    @Html.DropDownListFor(x => x.OdjeljenjeId, odjeljenja, "Izaberi odjeljenje")
+    <span asp-validation-for="OdjeljenjeId" class="text-danger"></span>
+
+    <br /><br />
+    <input type="submit" class="btn btn-primary" value="Snimi" />
+</form>

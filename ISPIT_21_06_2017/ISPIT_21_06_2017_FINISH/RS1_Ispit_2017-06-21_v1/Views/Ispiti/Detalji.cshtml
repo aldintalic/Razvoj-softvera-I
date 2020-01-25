@@ -1,0 +1,29 @@
+﻿@model RS1_Ispit_2017_06_21_v1.ViewModels.MaturskiIspitPrikazVM
+@{
+    ViewData["Title"] = "Detalji";
+}
+
+<h2>Detalji maturskog ispita</h2>
+
+<h3>Podaci o ispitu</h3>
+<br /><br />
+
+<h4>Ispitivač:  <b>@Model.Ispitivac</b></h4>
+<h4>Datum:  <b>@Model.Datum</b></h4>
+<h4>Odjeljenje:  <b>@Model.Odjeljenje</b></h4>
+
+<div id="ajaxDiv" style="border:2px solid black;padding:10px;">
+    
+</div>
+
+<script>
+    $(document).ready(function () {
+    $.ajax({
+        type: "POST",
+        url: "/AjaxTest/GenerisiDiv/@Model.Id",
+        success: function (data) {
+            $("#ajaxDiv").html(data);
+        }
+    });
+    });
+</script>

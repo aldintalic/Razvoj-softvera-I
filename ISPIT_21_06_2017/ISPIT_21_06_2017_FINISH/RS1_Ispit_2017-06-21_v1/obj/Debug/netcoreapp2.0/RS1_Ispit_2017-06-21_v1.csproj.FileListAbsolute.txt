@@ -1,0 +1,13 @@
+C:\Users\talicni\Desktop\Git_ReposFIT\Neko_ime\RS_1_Ispiti\Ispit8\21_06_2017_PocetniProjekt_dotNetCore\RS1_Ispit_2017-06-21_v1\bin\Debug\netcoreapp2.0\appsettings.json
+C:\Users\talicni\Desktop\Git_ReposFIT\Neko_ime\RS_1_Ispiti\Ispit8\21_06_2017_PocetniProjekt_dotNetCore\RS1_Ispit_2017-06-21_v1\bin\Debug\netcoreapp2.0\bundleconfig.json
+C:\Users\talicni\Desktop\Git_ReposFIT\Neko_ime\RS_1_Ispiti\Ispit8\21_06_2017_PocetniProjekt_dotNetCore\RS1_Ispit_2017-06-21_v1\bin\Debug\netcoreapp2.0\Properties\launchSettings.json
+C:\Users\talicni\Desktop\Git_ReposFIT\Neko_ime\RS_1_Ispiti\Ispit8\21_06_2017_PocetniProjekt_dotNetCore\RS1_Ispit_2017-06-21_v1\bin\Debug\netcoreapp2.0\RS1_Ispit_2017-06-21_v1.deps.json
+C:\Users\talicni\Desktop\Git_ReposFIT\Neko_ime\RS_1_Ispiti\Ispit8\21_06_2017_PocetniProjekt_dotNetCore\RS1_Ispit_2017-06-21_v1\bin\Debug\netcoreapp2.0\RS1_Ispit_2017-06-21_v1.runtimeconfig.json
+C:\Users\talicni\Desktop\Git_ReposFIT\Neko_ime\RS_1_Ispiti\Ispit8\21_06_2017_PocetniProjekt_dotNetCore\RS1_Ispit_2017-06-21_v1\bin\Debug\netcoreapp2.0\RS1_Ispit_2017-06-21_v1.runtimeconfig.dev.json
+C:\Users\talicni\Desktop\Git_ReposFIT\Neko_ime\RS_1_Ispiti\Ispit8\21_06_2017_PocetniProjekt_dotNetCore\RS1_Ispit_2017-06-21_v1\bin\Debug\netcoreapp2.0\RS1_Ispit_2017-06-21_v1.dll
+C:\Users\talicni\Desktop\Git_ReposFIT\Neko_ime\RS_1_Ispiti\Ispit8\21_06_2017_PocetniProjekt_dotNetCore\RS1_Ispit_2017-06-21_v1\bin\Debug\netcoreapp2.0\RS1_Ispit_2017-06-21_v1.pdb
+C:\Users\talicni\Desktop\Git_ReposFIT\Neko_ime\RS_1_Ispiti\Ispit8\21_06_2017_PocetniProjekt_dotNetCore\RS1_Ispit_2017-06-21_v1\obj\Debug\netcoreapp2.0\RS1_Ispit_2017-06-21_v1.csprojAssemblyReference.cache
+C:\Users\talicni\Desktop\Git_ReposFIT\Neko_ime\RS_1_Ispiti\Ispit8\21_06_2017_PocetniProjekt_dotNetCore\RS1_Ispit_2017-06-21_v1\obj\Debug\netcoreapp2.0\RS1_Ispit_2017-06-21_v1.AssemblyInfoInputs.cache
+C:\Users\talicni\Desktop\Git_ReposFIT\Neko_ime\RS_1_Ispiti\Ispit8\21_06_2017_PocetniProjekt_dotNetCore\RS1_Ispit_2017-06-21_v1\obj\Debug\netcoreapp2.0\RS1_Ispit_2017-06-21_v1.AssemblyInfo.cs
+C:\Users\talicni\Desktop\Git_ReposFIT\Neko_ime\RS_1_Ispiti\Ispit8\21_06_2017_PocetniProjekt_dotNetCore\RS1_Ispit_2017-06-21_v1\obj\Debug\netcoreapp2.0\RS1_Ispit_2017-06-21_v1.dll
+C:\Users\talicni\Desktop\Git_ReposFIT\Neko_ime\RS_1_Ispiti\Ispit8\21_06_2017_PocetniProjekt_dotNetCore\RS1_Ispit_2017-06-21_v1\obj\Debug\netcoreapp2.0\RS1_Ispit_2017-06-21_v1.pdb
