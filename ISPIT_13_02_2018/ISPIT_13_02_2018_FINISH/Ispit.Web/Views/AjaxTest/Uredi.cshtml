@@ -1,0 +1,23 @@
+﻿@model Ispit.Web.ViewModels.AjaxTestUrediVM
+@{
+    Layout = null;
+}
+
+<form ajax-poziv="da" action="/AjaxTest/Uredi" ajax-rezultat="ajaxDiv">
+    <table>
+        <tr>
+            <td><label asp-for="Obaveza"></label></td>
+            <td><input asp-for="Obaveza" readonly /></td>
+        </tr>
+        <tr>
+            <td><label>Završeno procentualno</label></td>
+            <td><input asp-for="ZavrsenoProcentualno" /></td>
+        </tr>
+        <tr>
+           <td><input asp-for="StanjeId" hidden /></td>
+        </tr>
+        <tr>
+            <td><input type="submit" value="Snimi" class="btn btn-primary"/></td>
+        </tr>
+    </table>
+</form>

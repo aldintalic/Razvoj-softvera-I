@@ -1,0 +1,84 @@
+﻿@model List<Ispit.Web.ViewModels.OznaceniDogadajiPrikazVM>
+@using Ispit.Web.ViewModels
+@{
+    ViewData["Title"] = "Index";
+    var notifikacije = ViewBag.notifikacije as List<OznaceniDogadajiNotifikacijeVM>;
+}
+
+@foreach (var item in notifikacije)
+{
+    @if (!item.Procitana && item.Rekurzivno)
+    {
+
+    <div class="alert alert-warning" role="alert">
+        <strong>Događaj @item.Dogadjaj - @item.Datum</strong> <br />
+        Ovo je podsjetnik za obavezu @item.Obaveza. Označi kao <a href="/OznaceniDogadaji/ProcitanaNotifikacija/@item.StanjeId" class="">pročitanu.</a>
+    </div>
+    }
+}
+
+
+<h2>Neoznačeni događaji</h2>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Datum</th>
+            <th>Nastavnik</th>
+            <th>Opis</th>
+            <th>Broj obaveza</th>
+            <th>Akcija</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                @if (!item.OznacenDogadjaj)
+                {
+                    <td>@item.DatumDogadjaja</td>
+                    <td>@item.Nastavnik</td>
+                    <td>@item.OpisDogadjaja</td>
+                    <td>@item.BrojObaveza</td>
+                    @if (item.DatumDogadjaja < DateTime.Now)
+                    {
+                        <td>Prošlo</td>
+                    }
+                    else
+                    {
+                        <td><a href="/OznaceniDogadaji/Dodaj?DogadjajId=@item.DogadjajId&KorisnikId=@item.KorisnikId" class="btn btn-primary">Dodaj</a></td>
+                    }
+                }
+            </tr>
+        }
+    </tbody>
+</table>
+<br />
+<hr />
+<br />
+
+<h2>Označeni događaji</h2>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Datum</th>
+            <th>Nastavnik</th>
+            <th>Opis</th>
+            <th>Relizovano obaveza RO</th>
+            <th>Akcija</th>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                @if (@item.OznacenDogadjaj)
+                {
+                    <td>@item.DatumDogadjaja</td>
+                    <td>@item.Nastavnik</td>
+                    <td>@item.OpisDogadjaja</td>
+                    <td>@item.IzvrsenoProcentualno %</td>
+                    <td><a href="/OznaceniDogadaji/Detalji/@item.DogadjajId">Detalji</a></td>
+                }
+            </tr>
+        }
+    </tbody>
+</table>

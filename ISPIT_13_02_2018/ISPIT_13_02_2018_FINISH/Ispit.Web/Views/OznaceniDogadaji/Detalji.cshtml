@@ -1,0 +1,38 @@
+﻿@model Ispit.Web.ViewModels.OznaceniDogadajiDetaljiVM
+<h2>Podaci o događaju</h2>
+
+<table class="table table-bordered">
+    <tr>
+        <td>Datum dogadjaja</td>
+        <td><input asp-for="DatumDogadjaja" readonly/></td>
+    </tr>
+    <tr>
+        <td>Datum dodavanja</td>
+        <td><input asp-for="DatumDodavanja" readonly/></td>
+    </tr>
+    <tr>
+        <td>Opis doagdjaja</td>
+        <td><input asp-for="OpisDogadjaja" readonly/></td>
+    </tr>
+    <tr>
+        <td>Nastavnik</td>
+        <td><input asp-for="Nastavnik" readonly/></td>
+    </tr>
+</table>
+
+<div id="ajaxDiv" style="border:1px solid black;padding:5px;">
+
+</div>
+
+<script>
+    $(document).ready(function () {
+        $.ajax({
+            type: "GET",
+            url: "/AjaxTest/Detalji/@Model.DogadjajId",
+            success: function (data) {
+                $("#ajaxDiv").html(data);
+            }
+        });
+    });
+
+</script>

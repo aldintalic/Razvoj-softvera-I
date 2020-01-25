@@ -1,0 +1,30 @@
+﻿@model List<Ispit.Web.ViewModels.AjaxTestDetaljiVM>
+@{ 
+    Layout = null;
+}
+
+<h2>Obaveze događaja</h2>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Naziv</th>
+            <th>Procenat realizacije obaveze</th>
+            <th>Salji notifikaciju X dana unaprijed</th>
+            <th>Ponavljaj notifikaciju svaki dan do pocetka dogadjaja</th>
+            <th>Akcija</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>@item.Naziv</td>
+            <td>@item.ProcenatRealizacijeObaveze %</td>
+            <td>@item.SaljiNotifikacijuXDanaUnaprijed</td>
+            <td>@item.PonavljajNotifikacijuSvakiDanUnaprijed</td>
+            <td><a ajax-poziv="da" ajax-rezultat="ajaxDiv" href="/AjaxTest/Uredi/@item.StanjeId" style="cursor:pointer">Uredi</a></td>
+        </tr>
+        }
+    </tbody>
+</table>
