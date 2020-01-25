@@ -1,0 +1,46 @@
+﻿@model Ispit_2017_09_11_DotnetCore.ViewModels.FakturaDetaljiVM
+@{
+    ViewData["Title"] = "Detalji";
+}
+<style>
+    td{
+        padding:10px;
+    }
+</style>
+
+<h2>Uredjivanje fakture</h2>
+
+<h3>Podaci o fakturi</h3>
+
+<table>
+    <tr>
+        <td><label asp-for="Klijent"></label></td>
+        <td><input asp-for="Klijent" readonly /></td>
+    </tr>
+
+    <tr>
+        <td><label asp-for="Datum"></label></td>
+        <td><input asp-for="Datum" readonly /></td>
+    </tr>
+
+</table>
+<div id="ajaxDiv" style="border:1px solid black;padding:5px;">
+
+</div>
+
+<script>
+    $(document).ready(function () {
+        $.ajax({
+            type: "GET",
+            url: "/AjaxTest/Detalji/@Model.FakturaId",
+            success: function (data) {
+                $("#ajaxDiv").html(data);
+            }
+        });
+    });
+
+
+
+</script>
+
+

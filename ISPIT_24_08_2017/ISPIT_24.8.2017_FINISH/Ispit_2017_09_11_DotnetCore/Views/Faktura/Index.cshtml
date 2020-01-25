@@ -1,0 +1,24 @@
+﻿@model List<Ispit_2017_09_11_DotnetCore.ViewModels.FakturaIndexVM>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Datum</th>
+            <th>Klijent</th>
+            <th>Akcija</th>
+        </tr>
+    </thead>
+    
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>@item.Datum</td>
+            <td>@item.Klijent</td>
+            <td><a href="/Faktura/Detalji/@item.FakturaId">Detalji</a> | <a href="/Faktura/Obrisi/@item.FakturaId">Obrisi</a></td>
+        </tr>
+        }
+    </tbody>
+</table>
+
+<a href="/Faktura/Dodaj" class="btn btn-primary">Dodaj</a>

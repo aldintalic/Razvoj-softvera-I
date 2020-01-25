@@ -1,0 +1,27 @@
+﻿@model Ispit_2017_09_11_DotnetCore.ViewModels.AjaxTestUrediVM
+
+@{ 
+    var proizvodi = ViewBag.proizvodi as List<SelectListItem>;
+}
+<h2>Uredjivanje stavke</h2>
+<form ajax-poziv="da" ajax-rezultat="ajaxDiv" action="/AjaxTest/Uredi">
+    <table>
+        <tr>
+            <td><label>Proizvod</label></td>
+            <td>@Html.DropDownListFor(x => x.ProizvodId, proizvodi)</td>
+        </tr>
+
+        <tr>
+            <td><label>Kolicina</label></td>
+            <td><input asp-for="Kolicina"/></td>
+        </tr>
+        <tr>
+            <td><input asp-for="StavkaId" hidden/></td>
+        </tr>
+        <tr>
+            <td>
+                <input type="submit" class="btn btn-primary" value="Snimi"/>
+            </td>
+        </tr>
+    </table>
+</form>

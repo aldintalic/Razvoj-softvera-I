@@ -1,0 +1,26 @@
+﻿@model Ispit_2017_09_11_DotnetCore.ViewModels.FakturaDodajVM
+@{ 
+    var ponude = ViewBag.ponude as List<SelectListItem>;
+    var klijenti = ViewBag.klijenti as List<SelectListItem>;
+}
+
+<h2>Nova faktura</h2>
+<form action="/Faktura/Dodaj" method="post">
+    <table>
+        <tr>
+            <td><label>Klijent</label></td>
+            <td>@Html.DropDownListFor(x => x.KlijentId, klijenti, "Izaberite klijenta")</td>
+        </tr>
+        <tr>
+            <td><label>Datum</label></td>
+            <td><input asp-for="Datum" /></td>
+        </tr>
+        <tr>
+            <td><label>Ponuda</label></td>
+            <td>@Html.DropDownListFor(x => x.PonudaId, ponude, "Izaberite ponudu(nije obavezno)")</td>
+        </tr>
+        <tr>
+            <td><input type="submit" value="Snimi"/></td>
+        </tr>
+    </table>
+</form>

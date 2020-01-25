@@ -1,0 +1,30 @@
+﻿@model List<Ispit_2017_09_11_DotnetCore.ViewModels.AjaxDetaljiVM>
+
+<h2>Stavke fakture</h2>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Proizvod</th>
+            <th>Cijena KM</th>
+            <th>Kolicina</th>
+            <th>Popust</th>
+            <th>Iznos(umanjen za popust)</th>
+            <th>Akcija</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            var iznos = item.Kolicina * item.Cijena * (1 - item.Popust);
+        <tr>
+            <td>@item.Proizvod</td>
+            <td>@item.Cijena KM</td>
+            <td>@item.Kolicina</td>
+            <td>@item.Popust</td>
+            <td>@iznos</td>
+            <td><a ajax-poziv="da" ajax-rezultat="ajaxDiv" href="/AjaxTest/Uredi/@item.StavkaId">Uredi</a> | <a ajax-poziv="da" ajax-rezultat="ajaxDiv" href="/AjaxTest/Obrisi/@item.StavkaId">Obrisi</a></td>
+        </tr>
+        }
+    </tbody>
+</table>

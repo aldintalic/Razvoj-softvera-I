@@ -1,0 +1,22 @@
+C:\Users\ibrah\Desktop\rs1-2017-18-master\Ispit_2017_09_11_DotnetCore_pocetni\Ispit_2017_09_11_DotnetCore\bin\Debug\netcoreapp2.0\Ispit_2017_09_11_DotnetCore.deps.json
+C:\Users\ibrah\Desktop\rs1-2017-18-master\Ispit_2017_09_11_DotnetCore_pocetni\Ispit_2017_09_11_DotnetCore\bin\Debug\netcoreapp2.0\Ispit_2017_09_11_DotnetCore.runtimeconfig.json
+C:\Users\ibrah\Desktop\rs1-2017-18-master\Ispit_2017_09_11_DotnetCore_pocetni\Ispit_2017_09_11_DotnetCore\bin\Debug\netcoreapp2.0\Ispit_2017_09_11_DotnetCore.runtimeconfig.dev.json
+C:\Users\ibrah\Desktop\rs1-2017-18-master\Ispit_2017_09_11_DotnetCore_pocetni\Ispit_2017_09_11_DotnetCore\bin\Debug\netcoreapp2.0\Ispit_2017_09_11_DotnetCore.dll
+C:\Users\ibrah\Desktop\rs1-2017-18-master\Ispit_2017_09_11_DotnetCore_pocetni\Ispit_2017_09_11_DotnetCore\bin\Debug\netcoreapp2.0\Ispit_2017_09_11_DotnetCore.pdb
+C:\Users\ibrah\Desktop\rs1-2017-18-master\Ispit_2017_09_11_DotnetCore_pocetni\Ispit_2017_09_11_DotnetCore\obj\Debug\netcoreapp2.0\Ispit_2017_09_11_DotnetCore.csprojResolveAssemblyReference.cache
+C:\Users\ibrah\Desktop\rs1-2017-18-master\Ispit_2017_09_11_DotnetCore_pocetni\Ispit_2017_09_11_DotnetCore\obj\Debug\netcoreapp2.0\Ispit_2017_09_11_DotnetCore.csproj.CoreCompileInputs.cache
+C:\Users\ibrah\Desktop\rs1-2017-18-master\Ispit_2017_09_11_DotnetCore_pocetni\Ispit_2017_09_11_DotnetCore\obj\Debug\netcoreapp2.0\Ispit_2017_09_11_DotnetCore.AssemblyInfoInputs.cache
+C:\Users\ibrah\Desktop\rs1-2017-18-master\Ispit_2017_09_11_DotnetCore_pocetni\Ispit_2017_09_11_DotnetCore\obj\Debug\netcoreapp2.0\Ispit_2017_09_11_DotnetCore.AssemblyInfo.cs
+C:\Users\ibrah\Desktop\rs1-2017-18-master\Ispit_2017_09_11_DotnetCore_pocetni\Ispit_2017_09_11_DotnetCore\obj\Debug\netcoreapp2.0\Ispit_2017_09_11_DotnetCore.dll
+C:\Users\ibrah\Desktop\rs1-2017-18-master\Ispit_2017_09_11_DotnetCore_pocetni\Ispit_2017_09_11_DotnetCore\obj\Debug\netcoreapp2.0\Ispit_2017_09_11_DotnetCore.pdb
+C:\Users\ibrah\Desktop\Ispit 24.8.2017\Ispit_2017_09_11_DotnetCore\obj\Debug\netcoreapp2.0\Ispit_2017_09_11_DotnetCore.csprojResolveAssemblyReference.cache
+C:\Users\ibrah\Desktop\Ispit 24.8.2017\Ispit_2017_09_11_DotnetCore\obj\Debug\netcoreapp2.0\Ispit_2017_09_11_DotnetCore.csproj.CoreCompileInputs.cache
+C:\Users\ibrah\Desktop\Ispit 24.8.2017\Ispit_2017_09_11_DotnetCore\obj\Debug\netcoreapp2.0\Ispit_2017_09_11_DotnetCore.AssemblyInfoInputs.cache
+C:\Users\ibrah\Desktop\Ispit 24.8.2017\Ispit_2017_09_11_DotnetCore\obj\Debug\netcoreapp2.0\Ispit_2017_09_11_DotnetCore.AssemblyInfo.cs
+C:\Users\ibrah\Desktop\Ispit 24.8.2017\Ispit_2017_09_11_DotnetCore\obj\Debug\netcoreapp2.0\Ispit_2017_09_11_DotnetCore.dll
+C:\Users\ibrah\Desktop\Ispit 24.8.2017\Ispit_2017_09_11_DotnetCore\obj\Debug\netcoreapp2.0\Ispit_2017_09_11_DotnetCore.pdb
+C:\Users\ibrah\Desktop\Ispit 24.8.2017\Ispit_2017_09_11_DotnetCore\bin\Debug\netcoreapp2.0\Ispit_2017_09_11_DotnetCore.deps.json
+C:\Users\ibrah\Desktop\Ispit 24.8.2017\Ispit_2017_09_11_DotnetCore\bin\Debug\netcoreapp2.0\Ispit_2017_09_11_DotnetCore.runtimeconfig.json
+C:\Users\ibrah\Desktop\Ispit 24.8.2017\Ispit_2017_09_11_DotnetCore\bin\Debug\netcoreapp2.0\Ispit_2017_09_11_DotnetCore.runtimeconfig.dev.json
+C:\Users\ibrah\Desktop\Ispit 24.8.2017\Ispit_2017_09_11_DotnetCore\bin\Debug\netcoreapp2.0\Ispit_2017_09_11_DotnetCore.dll
+C:\Users\ibrah\Desktop\Ispit 24.8.2017\Ispit_2017_09_11_DotnetCore\bin\Debug\netcoreapp2.0\Ispit_2017_09_11_DotnetCore.pdb
