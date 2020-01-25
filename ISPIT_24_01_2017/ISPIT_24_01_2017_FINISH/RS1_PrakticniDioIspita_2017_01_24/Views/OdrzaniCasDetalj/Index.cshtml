@@ -1,0 +1,25 @@
+﻿@model List<RS1_PrakticniDioIspita_2017_01_24.ViewModels.CasoviIndexVM>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Nastavnici</h2>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Ime i prezime</th>
+            <th>Akcija</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>@item.ImePrezime</td>
+            <td><a href="/OdrzaniCasDetalj/Detalji/@item.NastavnikId">Detalji</a></td>
+        </tr>
+        }
+    </tbody>
+</table>
+

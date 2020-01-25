@@ -1,0 +1,43 @@
+﻿@model List<RS1_PrakticniDioIspita_2017_01_24.ViewModels.AjaxTestPrikaziVM>
+
+<style>
+    #Prisutan{
+        color:white;
+        background-color:green;
+    }
+
+    #Odsutan{
+        color:white;
+        background-color:red;
+    }
+</style>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Ucenik</th>
+            <th>Ocjena</th>
+            <th>Prisutan</th>
+            <th>Opravdano odsutan</th>
+            <th>Akcija</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            var prisutan = item.Prisutan ? "Prisutan" : "Odsutan";
+            var opravdano = " ";
+            @if (!item.Prisutan)
+            {
+                opravdano = item.OpravdanoOdsutan ? "DA" : "NE";
+            }
+        <tr>
+            <td>@item.Ucenik</td>
+            <td>@item.Ocjena</td>
+            <td><a id="@prisutan" ajax-poziv="da" ajax-rezultat="ajaxDiv" href="/AjaxTest/PromijeniPrisustvo/@item.OdrzanCasDetaljId">@prisutan</a></td>
+            <td>@opravdano</td>
+            <td><a ajax-poziv="da" ajax-rezultat="ajaxDiv" href="/AjaxTest/Uredi/@item.OdrzanCasDetaljId">Uredi</a></td>
+        </tr>
+        }
+    </tbody>
+</table>

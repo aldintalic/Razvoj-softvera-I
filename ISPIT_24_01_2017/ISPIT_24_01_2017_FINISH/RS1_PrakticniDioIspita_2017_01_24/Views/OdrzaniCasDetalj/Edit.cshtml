@@ -1,0 +1,36 @@
+﻿@model RS1_PrakticniDioIspita_2017_01_24.ViewModels.OdrzanCasDetaljEditVM
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>Edit</h2>
+
+<form action="/OdrzaniCasDetalj/Edit" method="post">
+    <label asp-for="Datum"></label>
+    <input asp-for="Datum" value="@Model.Datum" />
+    <span asp-validation-for="Datum" class="text-danger"></span>
+    <br />
+    <label asp-for="Odjeljenje"></label>
+    <input asp-for="Odjeljenje" readonly />
+    <br />
+    <input asp-for="OdrzanCasId" hidden />
+    <input asp-for="NastavnikId" hidden />
+    <input type="submit" value="Snimi" class="btn btn-primary" />
+</form> 
+
+<div id="ajaxDiv" style="border:1px solid black;padding:5px;">
+
+</div>
+
+<script>
+    $(document).ready(function() {
+        $.ajax({
+            type: "GET",
+            url: "/AjaxTest/Prikazi/@Model.OdrzanCasId",
+            success: function(data) {
+                $("#ajaxDiv").html(data);
+            }
+        });
+    });
+
+</script>

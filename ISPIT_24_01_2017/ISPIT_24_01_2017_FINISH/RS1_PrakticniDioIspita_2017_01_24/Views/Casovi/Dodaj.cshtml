@@ -1,0 +1,19 @@
+﻿@model RS1_PrakticniDioIspita_2017_01_24.ViewModels.CasoviDodajVM
+@{
+    ViewData["Title"] = "Dodaj";
+    var lista = ViewBag.odjeljenjaPredmeti as List<SelectListItem>;
+}
+
+<h2>Dodaj</h2>
+
+<form action="/Casovi/Dodaj" method="post">
+    <label asp-for="Datum"></label>
+    <input asp-for="Datum"/>
+    <span asp-validation-for="Datum" class="text-danger"></span>
+    <br />
+    <label>Odjeljenje/Predmet</label>
+    @Html.DropDownListFor(x=>x.AngazovanId, lista,"Odjeljenje/Predmet")
+    <br />
+    <input asp-for="NastavnikId" hidden/>
+    <input type="submit" value="Snimi" class="btn btn-primary"/>
+</form>

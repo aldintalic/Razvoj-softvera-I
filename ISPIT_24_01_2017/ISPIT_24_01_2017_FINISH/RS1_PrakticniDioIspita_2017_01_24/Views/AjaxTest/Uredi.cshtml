@@ -1,0 +1,27 @@
+﻿@model RS1_PrakticniDioIspita_2017_01_24.ViewModels.AjaxTestUrediVM
+@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+    <form ajax-poziv="da" ajax-rezultat="ajaxDiv" action="/AjaxTest/Uredi">
+        <label asp-for="Ucenik"></label>
+        <input asp-for="Ucenik" readonly />
+        <br />
+        @if (!Model.Odsutan)
+        {
+            <label asp-for="Ocjena"></label>
+            <input asp-for="Ocjena" />
+        }
+        else
+        {
+            <label asp-for="OpravdanoOdsutan"></label>
+            <input asp-for="OpravdanoOdsutan" />
+        }
+        <span asp-validation-for="Ocjena" class="text-danger"></span>
+        <br />
+        <input asp-for="OdrzanCasDetaljId" hidden />
+        <br />
+        <input asp-for="Odsutan" hidden />
+
+        <input type="submit" value="Snimi" class="btn btn-primary" />
+    </form>

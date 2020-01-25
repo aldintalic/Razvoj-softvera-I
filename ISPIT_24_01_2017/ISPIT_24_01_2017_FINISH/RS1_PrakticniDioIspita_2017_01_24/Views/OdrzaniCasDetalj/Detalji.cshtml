@@ -1,0 +1,34 @@
+﻿@model List<RS1_PrakticniDioIspita_2017_01_24.ViewModels.OdrzaniCasDetaljIndexVM>
+@{
+    ViewData["Title"] = "Detalji";
+}
+
+<h2>Detalji</h2>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Datum odrzanog casa</th>
+            <th>Odjeljenje</th>
+            <th>Broj prisutnih</th>
+            <th>Predmet</th>
+            <th>Najbolji ucenik na predmetu</th>
+            <th>Akcija</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+
+        <tr>
+            <td>@item.DatumOdrzanogCasa</td>
+            <td>@item.Odjeljenje</td>
+            <td>@item.BrojPrisutnih od @item.BrojUcenikaUkupno</td>
+            <td>@item.Predmet</td>
+            <td>@item.NajboljiUcenikNaPredmetu</td>
+            <td><a href="/OdrzaniCasDetalj/Edit/@item.OdrzanCasId">Uredi</a></td>
+        </tr>
+        }
+    </tbody>
+</table>
+<a href="#" class="btn btn-primary">Dodaj</a>
+

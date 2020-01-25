@@ -1,0 +1,30 @@
+﻿@model List<RS1_PrakticniDioIspita_2017_01_24.ViewModels.CasoviDetaljiVM>
+@{
+    ViewData["Title"] = "Detalji";
+    var id = ViewBag.nastavnikId;
+}
+
+<h2>Prikaz odrzanih casova</h2>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Datum odrzanog casa</th>
+            <th>Odjeljenje</th>
+            <th>Predmet</th>
+            <th>Akcija</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>@item.DatumOdrzanogCasa</td>
+            <td>@item.Odjeljenje</td>
+            <td>@item.Predmet</td>
+            <td><a href="/Casovi/Edit?id=@item.AngazovanId&datum=@item.DatumOdrzanogCasa">Edit</a></td>
+        </tr>
+        }
+    </tbody>
+</table>
+<a href="/Casovi/Dodaj/@id" class="btn btn-primary">Dodaj</a>
