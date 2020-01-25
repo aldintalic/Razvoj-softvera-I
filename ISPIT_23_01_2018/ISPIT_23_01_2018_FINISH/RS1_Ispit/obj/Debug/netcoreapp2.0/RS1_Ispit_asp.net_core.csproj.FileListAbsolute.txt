@@ -1,0 +1,14 @@
+C:\Users\talicni\Desktop\RS_1_Ispiti\Ispit10\RS1_Ispit_2018_01_23_asp.net_core\RS1_Ispit\bin\Debug\netcoreapp2.0\appsettings.Development.json
+C:\Users\talicni\Desktop\RS_1_Ispiti\Ispit10\RS1_Ispit_2018_01_23_asp.net_core\RS1_Ispit\bin\Debug\netcoreapp2.0\appsettings.json
+C:\Users\talicni\Desktop\RS_1_Ispiti\Ispit10\RS1_Ispit_2018_01_23_asp.net_core\RS1_Ispit\bin\Debug\netcoreapp2.0\bundleconfig.json
+C:\Users\talicni\Desktop\RS_1_Ispiti\Ispit10\RS1_Ispit_2018_01_23_asp.net_core\RS1_Ispit\bin\Debug\netcoreapp2.0\Properties\launchSettings.json
+C:\Users\talicni\Desktop\RS_1_Ispiti\Ispit10\RS1_Ispit_2018_01_23_asp.net_core\RS1_Ispit\bin\Debug\netcoreapp2.0\RS1_Ispit_asp.net_core.deps.json
+C:\Users\talicni\Desktop\RS_1_Ispiti\Ispit10\RS1_Ispit_2018_01_23_asp.net_core\RS1_Ispit\bin\Debug\netcoreapp2.0\RS1_Ispit_asp.net_core.runtimeconfig.json
+C:\Users\talicni\Desktop\RS_1_Ispiti\Ispit10\RS1_Ispit_2018_01_23_asp.net_core\RS1_Ispit\bin\Debug\netcoreapp2.0\RS1_Ispit_asp.net_core.runtimeconfig.dev.json
+C:\Users\talicni\Desktop\RS_1_Ispiti\Ispit10\RS1_Ispit_2018_01_23_asp.net_core\RS1_Ispit\bin\Debug\netcoreapp2.0\RS1_Ispit_asp.net_core.dll
+C:\Users\talicni\Desktop\RS_1_Ispiti\Ispit10\RS1_Ispit_2018_01_23_asp.net_core\RS1_Ispit\bin\Debug\netcoreapp2.0\RS1_Ispit_asp.net_core.pdb
+C:\Users\talicni\Desktop\RS_1_Ispiti\Ispit10\RS1_Ispit_2018_01_23_asp.net_core\RS1_Ispit\obj\Debug\netcoreapp2.0\RS1_Ispit_asp.net_core.csprojAssemblyReference.cache
+C:\Users\talicni\Desktop\RS_1_Ispiti\Ispit10\RS1_Ispit_2018_01_23_asp.net_core\RS1_Ispit\obj\Debug\netcoreapp2.0\RS1_Ispit_asp.net_core.AssemblyInfoInputs.cache
+C:\Users\talicni\Desktop\RS_1_Ispiti\Ispit10\RS1_Ispit_2018_01_23_asp.net_core\RS1_Ispit\obj\Debug\netcoreapp2.0\RS1_Ispit_asp.net_core.AssemblyInfo.cs
+C:\Users\talicni\Desktop\RS_1_Ispiti\Ispit10\RS1_Ispit_2018_01_23_asp.net_core\RS1_Ispit\obj\Debug\netcoreapp2.0\RS1_Ispit_asp.net_core.dll
+C:\Users\talicni\Desktop\RS_1_Ispiti\Ispit10\RS1_Ispit_2018_01_23_asp.net_core\RS1_Ispit\obj\Debug\netcoreapp2.0\RS1_Ispit_asp.net_core.pdb

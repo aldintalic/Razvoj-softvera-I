@@ -1,0 +1,75 @@
+﻿@model List<RS1_Ispit_asp.net_core.ViewModels.AjaxTestDetaljiVM>
+
+<h2>Rezultati pretrage</h2>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Pretraga</th>
+            <th>Izmjerena vrijednost</th>
+            <th>JMJ</th>
+            <th>Referentna vrijednost</th>
+            <th>Akcija</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            var izmjereno=item.IzmjerenaVrijednost!=null?item.IzmjerenaVrijednost:"(nije izmjereno)";
+        <tr>
+            <td>@item.Pretraga</td>
+            @if (item.Vrsta != "Modalitet")
+            {
+                <td id="t-@item.RezultatId"><input id="numericka" asp-for="@item.IzmjerenaVrijednost" /> <a ajax-poziv="da" ajax-rezultat="ajaxDiv" id="a-@item.RezultatId" href="#" class="btn btn-primary" onclick="this.href=getUrl(@item.RezultatId)">Snimi</a></td>
+            }
+            else
+            {
+                <td id="t-@item.RezultatId">@Html.DropDownList(item.IzmjerenaVrijednost, item.Modaliteti, item.IzmjerenaVrijednost) <a ajax-poziv="da" ajax-rezultat="ajaxDiv" id="a-@item.RezultatId" href="#" class="btn btn-primary" onclick="this.href=getUrl(@item.RezultatId)">Snimi</a></td>
+            }
+            <td>@item.JMJ</td>
+
+            @if (item.Vrsta == "Modalitet")
+            {
+                @if (item.ReferentnaVrijednostMod)
+                {
+                    <td style="background-color:green">DOBRO</td>
+                }
+                else
+                {
+                    <td style="background-color:red">LOŠ</td>
+
+                }
+            }
+            else
+            {
+                @if (item.IzmjerenaVrijednost != null && double.Parse(item.IzmjerenaVrijednost) >= item.ReferentnaVrijednostMin && double.Parse(item.IzmjerenaVrijednost) <= item.ReferentnaVrijednostMax)
+                {
+                    <td style="background-color:green">DOBAR</td>
+                }
+                else
+                {
+                    <td style="background-color:red">LOŠ</td>
+                }
+            }
+            @if (!item.IsZavrsen)
+            {
+                <td><a id="btnZakljucaj" ajax-poziv="da" ajax-rezultat="ajaxDiv" href="/AjaxTest/Uredi/@item.RezultatId">Uredi</a></td>
+            }
+            else
+            {
+                <td><a style="color:black;text-decoration:none;">Uredi</a></td>
+            }
+        </tr>
+        }
+
+    </tbody>
+</table>
+
+<script>
+    function getUrl(id) {
+        var url = "/AjaxTest/UrediTabela?id=" + id+"&vrijednost=";
+        var t = document.getElementById('t-' + id).firstChild.value;
+        url += t;
+        return url;
+    }   
+</script>

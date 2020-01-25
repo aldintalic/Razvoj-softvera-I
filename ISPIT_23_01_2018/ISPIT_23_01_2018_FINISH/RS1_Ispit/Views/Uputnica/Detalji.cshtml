@@ -1,0 +1,51 @@
+﻿@model RS1_Ispit_asp.net_core.ViewModels.UputnicaDetaljiVM
+@{
+    ViewData["Title"] = "Detalji";
+}
+
+<h2>Detalji uputnice</h2>
+
+<style>
+    td {
+        padding: 5px;
+    }
+</style>
+
+<table>
+    <tr>
+        <td><h4>Datum uputnice</h4></td>
+        <td>@Html.DisplayTextFor(x => x.DatumUputnice)</td>
+    </tr>
+
+    <tr>
+        <td><h4>Pacijent</h4></td>
+        <td>@Html.DisplayTextFor(x => x.Pacijent)</td>
+    </tr>
+
+    <tr>
+        <td><h4>Datum rezultata</h4></td>
+        <td>@Html.DisplayTextFor(x => x.DatumRezultata)</td>
+    </tr>
+
+    <tr>
+        <td><h4>Zavrsen unos</h4></td>
+        <td><a href="/Uputnica/Zakljucaj/@Model.UputnicaId" class="btn btn-primary" onclick="zakljucaj()">Zakljucaj</a></td>
+    </tr>
+</table>
+
+<div id="ajaxDiv" style="border:1px solid black;padding:5px;">
+    
+</div>
+
+<script>
+    $(document).ready(function () {
+        $.ajax({
+            type: "POST",
+            url: "/AjaxTest/Detalji/@Model.UputnicaId",
+            success: function (data) {
+                $("#ajaxDiv").html(data);
+            }
+        });
+    });
+    
+</script>

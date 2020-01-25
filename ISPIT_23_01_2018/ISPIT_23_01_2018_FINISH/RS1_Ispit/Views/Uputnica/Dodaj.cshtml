@@ -1,0 +1,35 @@
+﻿@model RS1_Ispit_asp.net_core.ViewModels.UputnicaDodajVM
+@{
+    ViewData["Title"] = "Dodaj";
+    var ljekari = ViewBag.ljekari as List<SelectListItem>;
+    var vrste = ViewBag.vrste as List<SelectListItem>;
+    var pacijenti = ViewBag.pacijenti as List<SelectListItem>;
+}
+
+<h2>Nova uputnica</h2>
+
+<form action="/Uputnica/Dodaj" method="post">
+    <table>
+        <tr>
+            <td><label>Ljekar uputio</label></td>
+            <td>@Html.DropDownListFor(x => x.LjekarId, ljekari, "Izaberite ljekara")</td>
+        </tr>
+        <tr>
+            <td><label asp-for="DatumUputnice"></label></td>
+            <td><input asp-for="DatumUputnice" /></td>
+            <td><span asp-validation-for="DatumUputnice" class="text-danger"></span></td>
+        </tr>
+        <tr>
+            <td><label>Pacijent</label></td>
+            <td>@Html.DropDownListFor(x => x.PacijentId, pacijenti, "Izaberite pacijenta")</td>
+        </tr>
+        <tr>
+            <td><label>Vrsta pretrage</label></td>
+            <td>@Html.DropDownListFor(x => x.VrstaPretrageId, vrste, "Izaberite vrstu pretrage")</td>
+        </tr>
+        <tr>
+            <td><input type="submit" value="Snimi" class="btn btn-success"/></td>
+        </tr>
+    </table>
+</form>
+
