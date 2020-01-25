@@ -1,0 +1,15 @@
+﻿@model Ispit_2017_09_11_DotnetCore.ViewModels.AjaxTestDodajVM
+<h2>Dodaj učenika u odjeljenje</h2>
+@{ 
+    var ucenici = ViewBag.ucenici as List<SelectListItem>;
+}
+
+<form ajax-poziv="da" action="/AjaxTest/Dodaj" ajax-rezultat="ajaxDiv">
+    <label>Ucenik</label>
+    @Html.DropDownListFor(x => x.UcenikID, ucenici, "Izaberi ucenika")
+    <br />
+    <label asp-for="BrojUDnevniku"></label>
+    <input asp-for="BrojUDnevniku"/>
+    <input asp-for="OdjeljenjeId" hidden value="@ViewBag.id"/><br />
+    <input type="submit" value="Snimi" class="btn btn-primary"/>
+</form>

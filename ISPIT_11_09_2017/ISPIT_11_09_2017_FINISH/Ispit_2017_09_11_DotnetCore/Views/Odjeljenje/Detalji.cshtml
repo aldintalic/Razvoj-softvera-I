@@ -1,0 +1,47 @@
+﻿@model Ispit_2017_09_11_DotnetCore.ViewModels.OdjeljenjeDetaljiVM
+@{
+    ViewData["Title"] = "Detalji";
+}
+
+<h2>Detalji odjeljenja</h2>
+
+<table>
+    <tr>
+        <td>Skolska godina:</td>
+        <td><input type="text" value="@Model.SkolskaGodina" readonly/></td>
+    </tr>
+    <tr>
+        <td>Razred:</td>
+        <td><input value="@Model.Razred" readonly/></td>
+    </tr>
+    <tr>
+        <td>Oznaka:</td>
+        <td><input value="@Model.Oznaka" readonly/></td>
+    </tr>
+    <tr>
+        <td>Razrednik:</td>
+        <td><input value="@Model.Razrednik" readonly/></td>
+    </tr>
+    <tr>
+        <td>Broj predmeta:</td>
+        <td><input value="@Model.BrojPredmeta" readonly/></td>
+    </tr>
+</table>
+<a href="/Odjeljenje/GenerisiRedneBrojeve/@Model.Id" class="btn btn-success">Generisi redne brojeve</a>
+<div id="ajaxDiv" style="border:2px solid black;padding:10px">
+
+</div>
+
+<script>
+    $(document).ready(function () {
+         $.ajax({
+            type: "POST",
+            url: "/AjaxTest/Detalji/@Model.Id",
+            success: function (data) {
+                $("#ajaxDiv").html(data);
+            }
+        });
+});
+
+
+</script>

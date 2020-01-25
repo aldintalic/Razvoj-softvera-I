@@ -1,0 +1,31 @@
+﻿@model List<Ispit_2017_09_11_DotnetCore.ViewModels.AjaxTestDetalji>
+
+<h2>Odjeljenje stavke</h2>
+@{ 
+    var id = ViewBag.id;
+}
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Broj u dnevniku</th>
+            <th>Ucenik</th>
+            <th>Broj zakljucnih ocjena (kraj godine)</th>
+            <th>Akcija</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>@item.BrojUDnevniku</td>
+            <td>@item.Ucenik</td>
+            <td>@item.BrojZakljucnihOcjena</td>
+            <td><a href="#">Obrisi</a> | <a href="#">Uredi</a></td>
+        </tr>
+
+        }
+    </tbody>
+
+</table>
+
+<a ajax-poziv="da" ajax-rezultat="ajaxDiv" href="/AjaxTest/Dodaj/@id" class="btn btn-primary">Dodaj</a>

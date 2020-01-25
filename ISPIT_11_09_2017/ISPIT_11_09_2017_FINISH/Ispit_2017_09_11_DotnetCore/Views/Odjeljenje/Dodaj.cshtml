@@ -1,0 +1,38 @@
+﻿@model Ispit_2017_09_11_DotnetCore.ViewModels.OdjeljenjeDodajVM
+@{
+    ViewData["Title"] = "Dodaj";
+    var razrednici = ViewBag.razrednici as List<SelectListItem>;
+    var odjeljenja = ViewBag.odjeljenja as List<SelectListItem>;
+}
+
+<h2>Novo odjeljenje</h2>
+
+<form action="/Odjeljenje/Dodaj" method="post">
+    <table>
+        <tr>
+            <td><label asp-for="SkolskaGodina"></label></td>
+            <td><input asp-for="SkolskaGodina" /></td>
+        </tr>
+        <tr>
+            <td><label asp-for="Razred"></label></td>
+            <td><input asp-for="Razred" /></td>
+        </tr>
+        <tr>
+            <td> <label asp-for="Oznaka"></label></td>
+            <td><input asp-for="Oznaka" /></td>
+        </tr>
+        <tr>
+            <td><label>Nastavnik</label></td>
+            <td>@Html.DropDownListFor(x => x.NastavnikId, razrednici, "Izaberi razrednika")</td>
+        </tr>
+        <tr>
+            <td><label>Preuzmi iz odjeljenja</label></td>
+            <td>@Html.DropDownListFor(x => x.OdjeljenjeId, odjeljenja, "Izaberi odjeljenje")</td>
+        </tr>
+
+        <tr>
+            <td><input type="submit" value="Snimi" class="btn btn-primary"/></td>
+        </tr>
+    </table>
+</form>
+

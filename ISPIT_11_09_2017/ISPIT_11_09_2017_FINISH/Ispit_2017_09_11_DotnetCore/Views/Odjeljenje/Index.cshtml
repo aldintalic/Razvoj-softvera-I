@@ -1,0 +1,42 @@
+﻿@model List<Ispit_2017_09_11_DotnetCore.ViewModels.OdjeljenjeIndexVM>
+@{
+    ViewData["Title"] = "Index";
+    var t = ViewBag.test as List<Ispit_2017_09_11_DotnetCore.ViewModels.OdjeljenjeIndexVM>;
+}
+
+<table class="table table-bordered">
+    <thead>
+    <tr><td colspan="8" style="text-align:center"><h2>Prikaz odjeljenja</h2></td></tr>
+        <tr>
+            <th>Skolska godina</th>
+            <th>Razred (1 do 4)</th>
+            <th>Oznaka</th>
+            <th>Razrednik</th>
+            <th>Prebaceni u vise odjeljenje (razred)</th>
+            <th>Prosjek ocjena</th>
+            <th>Najbolji ucenik</th>
+            <th>Akcija</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            var x = item.PrebacenUViseOdjeljenje ? "DA" : "NE";
+        <tr>
+            <td>@item.SkolskaGodina</td>
+            <td>@item.Razred</td>
+            <td>@item.Oznaka</td>
+            <td>@item.Razrednik</td>
+            <td>@x</td>
+            <td>@item.ProsjekOcjena</td>
+            <td>@item.NajboljiUcenik</td>
+            <td><a href="/Odjeljenje/Detalji/@item.Id">Detalji</a> | <a href="/Odjeljenje/Obrisi?id=@item.Id" onclick="return confirm('Jeste li sigurni da zelite obrisati odjeljenje @item.Oznaka ?')">Obrisi</a></td>
+        </tr>
+
+        }
+
+    </tbody>
+
+</table>
+<a href="/Odjeljenje/Dodaj" class="btn btn-primary">Dodaj</a>
+

@@ -1,0 +1,28 @@
+C:\Users\talicni\Desktop\Git_ReposFIT\Neko_ime\RS_1_Ispiti\Ispit3\Ispit_2017_09_11_DotnetCore\bin\Debug\netcoreapp2.0\appsettings.Development.json
+C:\Users\talicni\Desktop\Git_ReposFIT\Neko_ime\RS_1_Ispiti\Ispit3\Ispit_2017_09_11_DotnetCore\bin\Debug\netcoreapp2.0\appsettings.json
+C:\Users\talicni\Desktop\Git_ReposFIT\Neko_ime\RS_1_Ispiti\Ispit3\Ispit_2017_09_11_DotnetCore\bin\Debug\netcoreapp2.0\bundleconfig.json
+C:\Users\talicni\Desktop\Git_ReposFIT\Neko_ime\RS_1_Ispiti\Ispit3\Ispit_2017_09_11_DotnetCore\bin\Debug\netcoreapp2.0\Properties\launchSettings.json
+C:\Users\talicni\Desktop\Git_ReposFIT\Neko_ime\RS_1_Ispiti\Ispit3\Ispit_2017_09_11_DotnetCore\bin\Debug\netcoreapp2.0\Ispit_2017_09_11_DotnetCore.deps.json
+C:\Users\talicni\Desktop\Git_ReposFIT\Neko_ime\RS_1_Ispiti\Ispit3\Ispit_2017_09_11_DotnetCore\bin\Debug\netcoreapp2.0\Ispit_2017_09_11_DotnetCore.runtimeconfig.json
+C:\Users\talicni\Desktop\Git_ReposFIT\Neko_ime\RS_1_Ispiti\Ispit3\Ispit_2017_09_11_DotnetCore\bin\Debug\netcoreapp2.0\Ispit_2017_09_11_DotnetCore.runtimeconfig.dev.json
+C:\Users\talicni\Desktop\Git_ReposFIT\Neko_ime\RS_1_Ispiti\Ispit3\Ispit_2017_09_11_DotnetCore\bin\Debug\netcoreapp2.0\Ispit_2017_09_11_DotnetCore.dll
+C:\Users\talicni\Desktop\Git_ReposFIT\Neko_ime\RS_1_Ispiti\Ispit3\Ispit_2017_09_11_DotnetCore\bin\Debug\netcoreapp2.0\Ispit_2017_09_11_DotnetCore.pdb
+C:\Users\talicni\Desktop\Git_ReposFIT\Neko_ime\RS_1_Ispiti\Ispit3\Ispit_2017_09_11_DotnetCore\obj\Debug\netcoreapp2.0\Ispit_2017_09_11_DotnetCore.csprojAssemblyReference.cache
+C:\Users\talicni\Desktop\Git_ReposFIT\Neko_ime\RS_1_Ispiti\Ispit3\Ispit_2017_09_11_DotnetCore\obj\Debug\netcoreapp2.0\Ispit_2017_09_11_DotnetCore.AssemblyInfoInputs.cache
+C:\Users\talicni\Desktop\Git_ReposFIT\Neko_ime\RS_1_Ispiti\Ispit3\Ispit_2017_09_11_DotnetCore\obj\Debug\netcoreapp2.0\Ispit_2017_09_11_DotnetCore.AssemblyInfo.cs
+C:\Users\talicni\Desktop\Git_ReposFIT\Neko_ime\RS_1_Ispiti\Ispit3\Ispit_2017_09_11_DotnetCore\obj\Debug\netcoreapp2.0\Ispit_2017_09_11_DotnetCore.dll
+C:\Users\talicni\Desktop\Git_ReposFIT\Neko_ime\RS_1_Ispiti\Ispit3\Ispit_2017_09_11_DotnetCore\obj\Debug\netcoreapp2.0\Ispit_2017_09_11_DotnetCore.pdb
+C:\Users\talicni\Desktop\Git_ReposFIT\Neko_ime\RS_1_Ispiti\Ispit3 - ZAVRSEN\Ispit_2017_09_11_DotnetCore\bin\Debug\netcoreapp2.0\appsettings.Development.json
+C:\Users\talicni\Desktop\Git_ReposFIT\Neko_ime\RS_1_Ispiti\Ispit3 - ZAVRSEN\Ispit_2017_09_11_DotnetCore\bin\Debug\netcoreapp2.0\appsettings.json
+C:\Users\talicni\Desktop\Git_ReposFIT\Neko_ime\RS_1_Ispiti\Ispit3 - ZAVRSEN\Ispit_2017_09_11_DotnetCore\bin\Debug\netcoreapp2.0\bundleconfig.json
+C:\Users\talicni\Desktop\Git_ReposFIT\Neko_ime\RS_1_Ispiti\Ispit3 - ZAVRSEN\Ispit_2017_09_11_DotnetCore\bin\Debug\netcoreapp2.0\Properties\launchSettings.json
+C:\Users\talicni\Desktop\Git_ReposFIT\Neko_ime\RS_1_Ispiti\Ispit3 - ZAVRSEN\Ispit_2017_09_11_DotnetCore\bin\Debug\netcoreapp2.0\Ispit_2017_09_11_DotnetCore.deps.json
+C:\Users\talicni\Desktop\Git_ReposFIT\Neko_ime\RS_1_Ispiti\Ispit3 - ZAVRSEN\Ispit_2017_09_11_DotnetCore\bin\Debug\netcoreapp2.0\Ispit_2017_09_11_DotnetCore.runtimeconfig.json
+C:\Users\talicni\Desktop\Git_ReposFIT\Neko_ime\RS_1_Ispiti\Ispit3 - ZAVRSEN\Ispit_2017_09_11_DotnetCore\bin\Debug\netcoreapp2.0\Ispit_2017_09_11_DotnetCore.runtimeconfig.dev.json
+C:\Users\talicni\Desktop\Git_ReposFIT\Neko_ime\RS_1_Ispiti\Ispit3 - ZAVRSEN\Ispit_2017_09_11_DotnetCore\bin\Debug\netcoreapp2.0\Ispit_2017_09_11_DotnetCore.dll
+C:\Users\talicni\Desktop\Git_ReposFIT\Neko_ime\RS_1_Ispiti\Ispit3 - ZAVRSEN\Ispit_2017_09_11_DotnetCore\bin\Debug\netcoreapp2.0\Ispit_2017_09_11_DotnetCore.pdb
+C:\Users\talicni\Desktop\Git_ReposFIT\Neko_ime\RS_1_Ispiti\Ispit3 - ZAVRSEN\Ispit_2017_09_11_DotnetCore\obj\Debug\netcoreapp2.0\Ispit_2017_09_11_DotnetCore.csprojAssemblyReference.cache
+C:\Users\talicni\Desktop\Git_ReposFIT\Neko_ime\RS_1_Ispiti\Ispit3 - ZAVRSEN\Ispit_2017_09_11_DotnetCore\obj\Debug\netcoreapp2.0\Ispit_2017_09_11_DotnetCore.AssemblyInfoInputs.cache
+C:\Users\talicni\Desktop\Git_ReposFIT\Neko_ime\RS_1_Ispiti\Ispit3 - ZAVRSEN\Ispit_2017_09_11_DotnetCore\obj\Debug\netcoreapp2.0\Ispit_2017_09_11_DotnetCore.AssemblyInfo.cs
+C:\Users\talicni\Desktop\Git_ReposFIT\Neko_ime\RS_1_Ispiti\Ispit3 - ZAVRSEN\Ispit_2017_09_11_DotnetCore\obj\Debug\netcoreapp2.0\Ispit_2017_09_11_DotnetCore.dll
+C:\Users\talicni\Desktop\Git_ReposFIT\Neko_ime\RS_1_Ispiti\Ispit3 - ZAVRSEN\Ispit_2017_09_11_DotnetCore\obj\Debug\netcoreapp2.0\Ispit_2017_09_11_DotnetCore.pdb
