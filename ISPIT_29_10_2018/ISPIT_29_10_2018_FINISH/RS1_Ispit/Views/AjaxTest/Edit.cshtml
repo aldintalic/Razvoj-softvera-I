@@ -1,0 +1,41 @@
+﻿@model RS1_Ispit_asp.net_core.ViewModels.AjaxTestEditVM
+
+<form ajax-poziv="da" ajax-rezultat="ajaxDiv" action="/AjaxTest/Edit">
+    <table>
+        <tr>
+            <td><label asp-for="Ucenik"></label></td>
+            <td><input asp-for="Ucenik" readonly /></td>
+        </tr>
+        @if (Model.Prisutan)
+        {
+
+            <tr>
+                <td><label asp-for="Ocjena"></label></td>
+                <td><input asp-for="Ocjena" /></td>
+                <td><input asp-for="Prisutan" hidden /></td>
+                <td><input asp-for="OpravdanoOdsutan" hidden /></td>
+            </tr>
+        }
+        else
+        {
+            <tr>
+                <td><label asp-for="Napomena"></label></td>
+                <td><input asp-for="Napomena" /></td>
+            </tr>
+            <tr>
+                <td><label>Opravdano odsutan</label></td>
+                <td><input asp-for="OpravdanoOdsutan"/></td>
+            </tr>
+        }
+        <tr>
+            <td>
+                <input asp-for="OdzanCasDetaljId" hidden />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="submit" value="Snimi" class="btn btn-primary" />
+            </td>
+        </tr>
+    </table>
+</form>

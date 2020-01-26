@@ -1,0 +1,44 @@
+﻿@model List<RS1_Ispit_asp.net_core.ViewModels.AjaxTestPrikaziVM>
+
+<style>
+    #Prisutan{
+        background-color:green;
+        color:white;
+        text-decoration:none;
+        cursor:pointer;
+    }
+    #Odsutan{
+        background-color:red;
+        color:white;
+        text-decoration:none;
+        cursor:pointer;
+    }
+
+</style>
+
+<h2>Ucenici</h2>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Ucenik</th>
+            <th>Ocjena</th>
+            <th>Prisutan</th>
+            <th>Opravdano odsutan</th>
+            <th>Akcija</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            var ocjena = item.Ocjena != 0 ? item.Ocjena.ToString() : " ";
+        <tr>
+            <td>@item.Ucenik</td>
+            <td>@ocjena</td>
+            <td><a id="@item.Prisutan" href="/AjaxTest/Prisustvo/@item.OdrzanCasDetaljId" ajax-poziv="da" ajax-rezultat="ajaxDiv">@item.Prisutan</a></td>
+            <td>@item.OpravdanoOdsutan</td>
+            <td><a ajax-poziv="da" ajax-rezultat="ajaxDiv" href="/AjaxTest/Edit/@item.OdrzanCasDetaljId">Uredi</a></td>
+        </tr>
+        }
+    </tbody>
+</table>
