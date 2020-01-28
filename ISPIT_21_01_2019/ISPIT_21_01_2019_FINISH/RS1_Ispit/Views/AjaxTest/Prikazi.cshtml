@@ -1,0 +1,50 @@
+﻿@model List<RS1_Ispit_asp.net_core.ViewModels.AjaxTestPrikaziVM>
+@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+<style>
+    #DA{
+        background-color:green;
+        color:white;
+        cursor:pointer;
+    }
+    #NE{
+        background-color:red;
+        color:white;
+        cursor:pointer;
+    }
+
+</style>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Ucenik</th>
+            <th>Prosjek ocjena</th>
+            <th>Pristupio ispitu</th>
+            <th>Rezultat maturskog ispita(max 100)</th>
+            <th>Akcija</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>@item.Ucenik</td>
+            <td>@item.ProsjekOcjena</td>
+            <td><a ajax-poziv="da" ajax-rezultat="ajaxDiv" href="/AjaxTest/Prisutan/@item.MaturskiIspitStavkaId" id="@item.PristupioIspitu">@item.PristupioIspitu</a></td>
+            <td><input id="id-@item.MaturskiIspitStavkaId" asp-for="@item.RezultatMaturskogIspita"/><a style="margin-left:10px;" class="btn btn-primary" ajax-poziv="da" ajax-rezultat="ajaxDiv" onclick='this.href=GetUrl(@item.MaturskiIspitStavkaId)'>Snimi</a></td>
+            <td><a ajax-poziv="da" ajax-rezultat="ajaxDiv" href="/AjaxTest/Uredi/@item.MaturskiIspitStavkaId">Uredi</a></td>
+        </tr>
+        }
+    </tbody>
+</table>
+
+<script>
+    function GetUrl(id) {
+        var url = "/AjaxTest/Bodovi?id=" + id + "&bodovi=";
+        var bod = document.getElementById("id-" + id).value;
+        url += bod;
+        return url;
+    }
+
+</script>

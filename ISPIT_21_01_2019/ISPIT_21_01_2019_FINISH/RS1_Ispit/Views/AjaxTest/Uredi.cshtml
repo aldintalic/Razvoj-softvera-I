@@ -1,0 +1,20 @@
+﻿@model RS1_Ispit_asp.net_core.ViewModels.AjaxTestUrediVM
+
+<form ajax-poziv="da" ajax-rezultat="ajaxDiv" action="/AjaxTest/Uredi">
+    <table>
+        <tr>
+            <td><label>Ucenik</label></td>
+            <td><input asp-for="Ucenik" readonly /></td>
+        </tr>
+        <tr>
+            <td><label>Bodovi</label></td>
+            <td><input asp-for="Bodovi" /></td>
+        </tr>
+        <tr>
+            <td><input asp-for="MaturskiIspitStavkaId" hidden /></td>
+            <td>
+                <input type="submit" value="Snimi" class="btn btn-primary" />
+            </td>
+        </tr>
+    </table>
+</form>

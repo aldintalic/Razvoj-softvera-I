@@ -1,0 +1,39 @@
+﻿@model List<RS1_Ispit_asp.net_core.ViewModels.OdrzanaNastavaPrikaziMaturskeIspiteVM>
+@{
+    ViewData["Title"] = "Index";
+    var id = ViewBag.nastavnikId;
+}
+<h2>Nastavnici</h2>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Datum</th>
+            <th>Skola</th>
+            <th>Predmet</th>
+            <th>Nisu pristupili ucenici**</th>
+            <th>Akcija</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Datum</td>
+                <td>@item.Skola</td>
+                <td>@item.Predmet</td>
+
+                <td>
+                    @foreach (var u in item.NisuPristupiliUcenici)
+                    {
+                        <span>@u, </span>
+                    }
+                </td>
+                <td><a href="/OdrzanaNastava/Uredi/@item.MaturskiIspitId">Uredi</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
+<a href="/OdrzanaNastava/Dodaj/@id" class="btn btn-primary">Dodaj</a>
+
+
