@@ -1,0 +1,38 @@
+﻿@model List<RS1_Ispit_asp.net_core.ViewModels.IspitiIndexVM>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Nastavnici-predmeti-akademske godine</h2>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Naziv predmeta</th>
+            <th>Akademska godina</th>
+            <th>Ime i prezime nastavnika</th>
+            <th>Broj odrzanih casova</th>
+            <th>Broj studenata na predmetu</th>
+            <th>Akcija</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @for (int i=0;i<Model.Count();i++)
+        {
+
+            <tr>
+                @if (i % 2 == 0)
+                {
+                    <td rowspan="2">@Model[i].NazivPredmeta</td>
+                }
+
+                <td>@Model[i].AkademskaGodina</td>
+                <td>@Model[i].ImeIPrezimeNastavnika</td>
+                <td>@Model[i].BrojOdrzanihCasova</td>
+                <td>@Model[i].BrojStudenataNaPredmetu</td>
+                <td><a href="/Ispiti/Prikazi/@Model[i].AngazovanId">Odaberi</a></td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,35 @@
+﻿@model RS1_Ispit_asp.net_core.ViewModels.IspitiDodajVM
+@{
+    ViewData["Title"] = "Dodaj";
+}
+
+<h2>Dodavanje novog ispita</h2>
+
+<form action="/Ispiti/Dodaj" method="post">
+    <table>
+        <tr>
+            <td><label asp-for="Predmet"></label></td>
+            <td><input asp-for="Predmet" readonly /></td>
+        </tr>
+        <tr>
+            <td><label asp-for="Nastavnik"></label></td>
+            <td><input asp-for="Nastavnik" readonly /></td>
+        </tr>
+        <tr>
+            <td><label asp-for="SkolskaGodina"></label></td>
+            <td><input asp-for="SkolskaGodina" readonly /></td>
+        </tr>
+        <tr>
+            <td><label asp-for="Datum"></label></td>
+            <td><input asp-for="Datum" /></td>
+        </tr>
+        <tr>
+            <td><label asp-for="Napomena"></label></td>
+            <td><input asp-for="Napomena" /></td>
+        </tr>
+        <tr>
+            <td><input asp-for="AngazovanId" hidden/></td>
+            <td><input type="submit" value="Snimi" class="btn btn-primary"/></td>
+        </tr>
+    </table>
+</form>

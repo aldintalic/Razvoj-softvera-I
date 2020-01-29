@@ -1,0 +1,60 @@
+﻿@model List<RS1_Ispit_asp.net_core.ViewModels.AjaxTestPrikaziVM>
+@{ 
+    var datum = ViewBag.datum;
+    var zakljucan = ViewBag.zakljucan;
+
+}
+<style>
+    #Pristupio{
+        background-color:green;
+        color:white;
+        text-decoration:none;
+    }
+    #NijePristupio{
+        background-color:red;
+        color:white;
+        text-decoration:none;
+    }
+
+</style>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Student</th>
+            <th>Pristupio ispitu</th>
+            <th>Ocjena</th>
+            <th>Akcija</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>@item.Student</td>
+            <td><a id="@item.PristupioIspitu" href="/Ispiti/Pristupio/@item.IspitStavkaId">@item.PristupioIspitu</a></td>
+            @if (item.PristupioIspitu == "Pristupio" && DateTime.Now > datum && zakljucan=="ne")
+            {
+                <td><input asp-for="@item.Ocjena" id="input-@item.IspitStavkaId" style="margin-right:10px;"/><a ajax-poziv="da" ajax-rezultat="ajaxDiv" class="btn btn-default" onclick="this.href=GetUrl(@item.IspitStavkaId)">Snimi</a></td>
+                <td><a ajax-poziv="da" ajax-rezultat="ajaxDiv" href="/AjaxTest/Uredi/@item.IspitStavkaId">Uredi</a></td>
+            }
+            else
+            {
+                <td>@item.Ocjena</td>
+                <td></td>
+            }
+        </tr>
+
+        }
+    </tbody>
+</table>
+
+<script>
+    function GetUrl(id) {
+        var url = "/AjaxTest/UnesiOcjenu?id=" + id + "&ocjena=";
+        var ocjena = document.getElementById("input-" + id).value;
+        url += ocjena;
+        return url;
+    }
+
+</script>

@@ -1,0 +1,40 @@
+﻿@model List<RS1_Ispit_asp.net_core.ViewModels.IspitiPrikaziVM>
+@{
+    ViewData["Title"] = "Prikazi";
+    var predmet = ViewBag.predmet;
+    var nastavnik = ViewBag.nastavnik;
+    var godina = ViewBag.akademskagodina;
+    var id = ViewBag.id;
+}
+
+
+<h2>Prikazi</h2>
+
+<h3><b>Predmet</b>: @predmet</h3>
+<h3><b>Nastavnik</b>: @nastavnik</h3>
+<h3><b>Akademska godina</b>: @godina</h3>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Datum ispita</th>
+            <th>Broj studenata koji nisu polozili predmet</th>
+            <th>Broj prijavaljenih studenata</th>
+            <th>Evidentirani rezultati (zakljucano)</th>
+            <th>Akcija</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>@item.DatumIspita</td>
+            <td>@item.BrojStudenataPolozili</td>
+            <td>@item.BrojPrijavljenih</td>
+            <td >@item.EvidentiraniRezultati</td>
+            <td><a href="/Ispiti/Detalji/@item.IspitId">Detalji</a> | <a href="/Ispiti/Zakljucaj/@item.IspitId">Zakljucaj</a></td>
+        </tr>
+        }
+    </tbody>
+</table>
+<a href="/Ispiti/Dodaj/@id" class="btn btn-primary">Dodaj</a>

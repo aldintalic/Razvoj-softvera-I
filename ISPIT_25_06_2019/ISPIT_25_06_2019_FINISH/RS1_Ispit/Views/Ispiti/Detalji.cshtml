@@ -1,0 +1,29 @@
+﻿@model RS1_Ispit_asp.net_core.ViewModels.IspitiDetaljiVM
+@{
+    ViewData["Title"] = "Detalji";
+}
+
+<h2>Detalji ispita</h2>
+
+<h3><b>Predmet</b>: @Model.Predmet</h3>
+<h3><b>Nastavnik</b>: @Model.Nastavnik</h3>
+<h3><b>Akademska godina</b>: @Model.AkademskaGodina</h3>
+<h3><b>Datum</b>: @Model.Datum</h3>
+<h3><b>Napomena</b>: @Html.DisplayFor(s=>s.Napomena)</h3>
+
+<div id="ajaxDiv" style="border:1px solid black;padding:5px">
+
+</div>
+
+<script>
+    $(document).ready(function () {
+        $.ajax({
+            type: "GET",
+            url: "/AjaxTest/Prikazi/@Model.ispitId",
+            success: function (data) {
+                $("#ajaxDiv").html(data);
+            }
+        });
+    });
+
+</script>
